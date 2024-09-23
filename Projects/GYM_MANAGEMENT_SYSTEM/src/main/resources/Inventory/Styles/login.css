@@ -1,0 +1,45 @@
+#loginButton {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#loginButton:hover {
+
+    -fx-background-color: #ADADAD;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+
+
+}
+
+#loginButton:pressed {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#registerButton {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#registerButton:hover {
+
+    -fx-background-color: #ADADAD;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+}
+
+#registerButton {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#cancelButton {
+
+    -fx-background-color: whitesmoke;
+
+}

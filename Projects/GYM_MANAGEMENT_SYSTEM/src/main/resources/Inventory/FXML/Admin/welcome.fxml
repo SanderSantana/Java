@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="canvas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Admin.WelcomeController">
+   <top>
+      <AnchorPane fx:id="topLayer" prefHeight="98.0" prefWidth="953.0" stylesheets="@../../Styles/Admin/Welcome.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="gymNameLabel" layoutX="14.0" layoutY="31.0" prefHeight="36.0" prefWidth="163.0" text="WhisperWeight" />
+            <Button fx:id="exitButton" alignment="CENTER" layoutX="883.0" layoutY="32.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="31.0" prefWidth="25.0" stylesheets="@../../Styles/Admin/Welcome.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="166.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/wind (1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="contentPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../Styles/Admin/Welcome.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="140.0" layoutY="409.0" prefHeight="17.0" prefWidth="76.0" text="New Member" textFill="#989491" />
+            <Button fx:id="addMembersButton" alignment="CENTER" layoutX="126.0" layoutY="299.0" mnemonicParsing="false" onAction="#newMemberButtonOnAction" prefHeight="102.0" prefWidth="103.0" stylesheets="@../../Styles/Admin/Welcome.css" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/addMembers.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="logOutButton" alignment="CENTER" layoutX="764.0" layoutY="299.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="102.0" prefWidth="103.0" stylesheets="@../../Styles/Admin/Welcome.css">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="updateDeleteButton" layoutX="279.0" layoutY="299.0" mnemonicParsing="false" onAction="#updateDeleteButtonOnAction" prefHeight="102.0" prefWidth="103.0" stylesheets="@../../Styles/Admin/Welcome.css">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/add-delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="paymentButton" layoutX="425.0" layoutY="299.0" mnemonicParsing="false" onAction="#paymentButtonOnAction" prefHeight="102.0" prefWidth="103.0" stylesheets="@../../Styles/Admin/Welcome.css">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/payment.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="membersButton" alignment="CENTER" layoutX="585.0" layoutY="299.0" mnemonicParsing="false" onAction="#membersButtonOnAction" prefHeight="102.0" prefWidth="103.0" stylesheets="@../../Styles/Admin/Welcome.css">
+               <graphic>
+                  <ImageView fitHeight="58.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/undraw_collaboration_re_vyau.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label fx:id="greetingLabel" layoutX="312.0" layoutY="36.0" stylesheets="@../../Styles/Admin/Welcome.css" text="Hello!" />
+            <Label fx:id="welcomeMessageLabel" layoutX="238.0" layoutY="200.0" prefHeight="30.0" prefWidth="478.0" text="Welcome to the Admin Dashboard – your command center!" />
+            <Label layoutX="287.0" layoutY="409.0" prefHeight="17.0" prefWidth="87.0" text="Update/Delete" textFill="#989491" />
+            <Label layoutX="450.0" layoutY="409.0" prefHeight="17.0" prefWidth="50.0" text="Payment" textFill="#989491" />
+            <Label layoutX="612.0" layoutY="409.0" prefHeight="17.0" prefWidth="50.0" text="Members" textFill="#989491" />
+            <Label layoutX="794.0" layoutY="409.0" prefHeight="17.0" prefWidth="44.0" text="LogOut" textFill="#989491" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

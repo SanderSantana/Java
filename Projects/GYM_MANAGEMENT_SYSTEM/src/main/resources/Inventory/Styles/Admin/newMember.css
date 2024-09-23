@@ -1,0 +1,296 @@
+
+
+
+#navBar {
+
+    -fx-background-color: #1B1B1B;
+
+}
+
+#contentPane {
+
+    -fx-background-color: #242424;
+
+}
+
+#logoButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+
+}
+
+#newMemberButton {
+
+    /*-fx-background-color: white;*/
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+    -fx-background-color: #242424;
+
+
+}
+
+
+#updateDeleteButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+
+}
+
+#paymentButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+}
+
+#membersButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+}
+
+#logOutButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+}
+
+#exitButton {
+
+    -fx-background-color: white;
+
+}
+
+#newMemberButton:hover {
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#updateDeleteButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#paymentButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#membersButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#logOutButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#exitButton:hover {
+
+    -fx-background-color: #E8E8E8;
+
+}
+
+#updateDeleteButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#paymentButton:pressed {
+
+    -fx-background-color: #242424;
+}
+
+#membersButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#logOutButton:pressed{
+
+    -fx-background-color: #242424;
+
+}
+
+#exitButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#IdLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#warningTextLabel {
+
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #ff0202;
+
+}
+
+
+#FnameField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.48);
+    -fx-font-family: "Arial";
+    -fx-text-fill: #F37274;
+
+
+}
+
+#MnameField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.48);
+    -fx-font-family: "Arial";
+    -fx-text-fill: #F37274;
+
+
+}
+
+#LnameField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.48);
+    -fx-font-family: "Arial";
+    -fx-text-fill: #F37274;
+
+
+}
+
+#emailField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.48);
+    -fx-font-family: "Arial";
+    -fx-text-fill: #F37274;
+
+
+}
+
+#PnumberField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.48);
+    -fx-font-family: "Arial";
+    -fx-text-fill: #F37274;
+
+
+}
+
+#genderLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#dobLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#address {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.48);
+    -fx-font-family: "Arial";
+    -fx-text-fill: #F37274;
+
+
+}
+
+#subTypeLabel {
+
+    -fx-font-family: "Arial Black";
+
+
+}
+
+#genderFemaleButton {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+
+}
+
+#genderMaleButton {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+
+}
+
+#subType1Button {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+
+}
+
+#subType2Button {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+
+}
+
+#subType3Button {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+
+}
+
+#saveButton:pressed {
+
+    -fx-font-family: "Arial Black";
+    -fx-background-color: #009e02;
+    -fx-text-fill: #003302;
+
+}
+
+#saveButton {
+
+
+    -fx-font-family: "Arial";
+    -fx-background-color: rgba(183, 180, 180, 0.82);
+
+}
+
+#clearFormButton {
+
+    -fx-opacity: 0;
+
+}
+
+#clearFormButton:pressed {
+
+    -fx-text-fill: #4b4b4b;
+
+}
+

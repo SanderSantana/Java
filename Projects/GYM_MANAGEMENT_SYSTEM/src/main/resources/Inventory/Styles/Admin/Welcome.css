@@ -1,0 +1,169 @@
+/*@font-face {*/
+
+/*    src: url("/Inventory/fonts/Mooli/Mooli-Regular.ttf");*/
+/*}*/
+
+
+
+#topLayer {
+
+    -fx-background-color: #1B1B1B;
+
+}
+
+
+#gymNameLabel {
+
+    -fx-font-size: 20;
+        -fx-text-fill: linear-gradient(from 15% 10% to 100% 200%, repeat, #E94041 20%, #F37274 40%);
+    -fx-font-family: "Arial Rounded MT Bold";
+
+}
+
+
+#contentPane {
+
+    -fx-background-color: #242424;
+
+}
+
+#exitButton {
+
+    -fx-background-color: #F37274;
+
+}
+
+#addMembersButton {
+
+    -fx-background-color:#242424;
+
+}
+
+#updateDeleteButton {
+
+    -fx-background-color: #242424;
+
+}
+
+#paymentButton {
+
+    -fx-background-color: #242424;
+
+}
+
+#membersButton {
+
+    -fx-background-color: #242424;
+
+}
+
+
+#logOutButton {
+
+    -fx-background-color:#242424;
+
+}
+
+#greetingLabel {
+
+    /*-fx-font-family: 'Mooli-Regular';*/
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 120;
+    -fx-background-color: #242424;
+    -fx-text-fill: linear-gradient(from 15% 10% to 100% 200%, repeat, #E94041 20%, #F37274 40%);
+}
+
+#welcomeMessageLabel {
+
+    -fx-font-size: 18;
+    -fx-text-fill: #989491;
+
+}
+
+
+#addMembersButton:hover {
+
+    -fx-background-color: #F37274;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+
+}
+
+#exitButton:hover {
+
+    /*-fx-effect: dropshadow(one-pass-box, #A1A1A1, 1, 0, 0, 0);*/
+    -fx-background-color: #E8E8E8;
+
+}
+
+
+#updateDeleteButton:hover {
+
+    -fx-background-color: #F37274;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+
+}
+
+#paymentButton:hover {
+
+    -fx-background-color:#F37274;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+
+}
+
+#membersButton:hover {
+
+    -fx-background-color: #F37274;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+
+}
+
+#logOutButton:hover {
+
+    -fx-background-color: #F37274;
+    -fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);
+
+
+}
+
+#exitButton:pressed {
+
+    -fx-background-color: whitesmoke;
+
+}
+
+#addMembersButton:pressed {
+
+    -fx-background-color: whitesmoke;
+
+}
+
+#updateDeleteButton:pressed {
+
+    -fx-background-color: whitesmoke;
+
+}
+
+#paymentButton:pressed {
+
+    -fx-background-color: whitesmoke;
+
+}
+
+#membersButton:pressed {
+
+    -fx-background-color: whitesmoke;
+
+}
+
+#logOutButton:pressed {
+
+    -fx-background-color: whitesmoke;
+
+}
+
+
+

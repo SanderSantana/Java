@@ -1,0 +1,354 @@
+#EditlogoButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+
+}
+
+
+#EditnewMemberButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+
+
+}
+
+#edit {
+
+    -fx-background-color: #242424;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+
+}
+
+
+#EditnewMemberButton:hover {
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#edit:hover {
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+
+
+#edit:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#EditnewMemberButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#contentPane {
+
+    -fx-background-color: #242424;
+
+}
+
+#EditpaymentButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+
+}
+
+#EditmembersButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+
+}
+
+#EditlogOutButton {
+
+    -fx-background-color: #1B1B1B;
+    -fx-font-size: 17;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: white;
+
+}
+
+#EditexitButton {
+
+    -fx-background-color: white;
+
+}
+
+#EditnewMemberButton:hover {
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#EditupdateDeleteButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#EditpaymentButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#EditmembersButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#EditlogOutButton:hover {
+
+
+    -fx-border-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+    -fx-border-width: 0px 0px 3px 0px;
+
+}
+
+#EditexitButton:hover {
+
+    -fx-background-color: #E8E8E8;
+
+}
+
+#EditupdateDeleteButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#EditpaymentButton:pressed {
+
+    -fx-background-color: #242424;
+}
+
+#EditmembersButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#EditlogOutButton:pressed{
+
+    -fx-background-color: #242424;
+
+}
+
+#EditexitButton:pressed {
+
+    -fx-background-color: #242424;
+
+}
+
+#searchButton {
+
+    -fx-background-color: #242424;
+
+}
+
+#deleteButton {
+
+    -fx-opacity: 0;
+
+}
+
+#deleteButton:pressed {
+
+    -fx-font-family: Arial;
+    -fx-background-color: white;
+    -fx-text-fill: #d90000;
+
+}
+
+#IdLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#warningTextLabel {
+
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #ff0202;
+
+}
+
+
+#EditFnameField {
+
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.63);
+    -fx-font-family: "Arial";
+    -fx-opacity: 1.0;
+
+}
+
+#EditMnameField {
+
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.63);
+    -fx-font-family: "Arial";
+    -fx-opacity: 1.0;
+
+}
+
+#EditLnameField {
+
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.63);
+    -fx-font-family: "Arial";
+    -fx-opacity: 1.0;
+
+}
+
+#EditemailField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.63);
+    -fx-font-family: "Arial";
+    -fx-opacity: 1.0;
+}
+
+#EditPnumberField {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.63);
+    -fx-font-family: "Arial";
+    -fx-opacity: 1.0;
+
+}
+
+#EditgenderLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#EditIdLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#EditAddress {
+
+    -fx-prompt-text-fill: rgba(183, 180, 180, 0.63);
+    -fx-font-family: "Arial";
+    -fx-opacity: 1.0;
+
+}
+
+#EditsubTypeLabel {
+
+    -fx-font-family: "Arial Black";
+
+}
+
+#EditgenderFemaleButton {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+
+
+}
+
+#EditgenderMaleButton {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+
+}
+
+#EditsubType1Button {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+
+}
+
+#EditsubType2Button {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+
+}
+
+#EditsubType3Button {
+
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+
+}
+
+#EditsaveButton:pressed {
+
+    -fx-font-family: "Arial Black";
+    -fx-background-color: #009e02;
+    -fx-text-fill: #003302;
+
+}
+
+#EditsaveButton {
+
+    -fx-font-family: "Arial";
+    -fx-background-color: rgba(183, 180, 180, 0.82);
+
+}
+
+#EditclearFormButton {
+
+    -fx-opacity: 0;
+
+}
+
+#EditclearFormButton:pressed {
+
+    -fx-text-fill: #4b4b4b;
+
+}
+
+
+
+
+
+
+

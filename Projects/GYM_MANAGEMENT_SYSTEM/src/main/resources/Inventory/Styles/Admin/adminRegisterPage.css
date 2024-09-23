@@ -1,0 +1,130 @@
+#usernameTextField {
+
+    -fx-background-color: whitesmoke;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-background-insets: 0, 0 0 0 0 ;
+    -fx-font-family: "Arial";
+
+}
+
+#passwordField {
+
+    -fx-background-color: whitesmoke;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-background-insets: 0, 0 0 0 0 ;
+    -fx-font-family: "Arial";
+
+}
+
+#tokenTextField {
+
+    -fx-background-color: whitesmoke;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-background-insets: 0, 0 0 0 0 ;
+    -fx-font-family: "Arial";
+
+}
+
+#registerButton {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#registerButton:hover {
+
+    -fx-background-color: #ADADAD;
+    /*-fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);*/
+    -fx-font-weight: bold;
+
+}
+
+#registerButton:pressed {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#signInButton {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#signInButton:hover {
+
+    -fx-background-color: #ADADAD;
+    /*-fx-effect: dropshadow(gaussian, #A1A1A1, 8, 0, 0, 0);*/
+    -fx-font-weight: bold;
+
+}
+
+#signInButton:pressed {
+
+    -fx-background-color:  #C2C2C2;
+
+}
+
+#exitButton {
+
+    -fx-background-color: transparent;
+
+}
+
+
+#usernameTextField {
+
+    -fx-background-color: #E2E0E3;
+    -fx-prompt-text-fill: rgba(151, 150, 153, 0.73);
+    -fx-text-fill: black;
+    -fx-font-family: Calibri;
+    -fx-font-size: 12;
+
+}
+
+#usernameLabel {
+
+    -fx-font-family: Calibri;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+
+}
+
+#passwordLabel {
+
+    -fx-font-family: Calibri;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+
+}
+
+#tokenLabel{
+
+    -fx-font-family: Calibri;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+
+}
+
+#passwordField {
+
+    -fx-background-color: #E2E0E3;
+    -fx-prompt-text-fill: rgba(151, 150, 153, 0.7);
+    -fx-text-fill: black;
+    -fx-font-family: Calibri;
+    -fx-font-size: 12;
+
+}
+
+#tokenTextField {
+
+    -fx-background-color: #E2E0E3;
+    -fx-prompt-text-fill: rgba(151, 150, 153, 0.68);
+    -fx-text-fill: black;
+    -fx-font-family: Calibri;
+    -fx-font-size: 12;
+
+}

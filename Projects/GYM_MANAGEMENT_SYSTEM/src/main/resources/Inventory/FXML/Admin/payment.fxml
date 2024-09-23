@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="953.0" stylesheets="@../../Styles/Admin/payment.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Admin.paymentController">
+    <top>
+        <AnchorPane fx:id="navBar" prefHeight="60.0" prefWidth="953.0" stylesheets="@../../Styles/Admin/payment.css" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="newMemberButton" layoutX="220.0" layoutY="1.0" mnemonicParsing="false" onAction="#newMemberButtonOnAction" prefHeight="63.0" prefWidth="142.0" stylesheets="@../../Styles/Admin/payment.css" text="New Member">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Icons/add-user.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button fx:id="edit" alignment="CENTER" layoutX="390.0" mnemonicParsing="false" onAction="#editMemberButtonOnAction" prefHeight="64.0" prefWidth="84.0" stylesheets="@../../Styles/Admin/payment.css" text="Edit">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Icons/editUser.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button fx:id="paymentButton" layoutX="504.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="106.0" stylesheets="@../../Styles/Admin/payment.css" text="Payment">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Icons/money.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button fx:id="exitButton" alignment="CENTER" layoutX="895.0" layoutY="17.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="29.0" prefWidth="43.0" stylesheets="@../../Styles/Admin/payment.css">
+                    <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Images/Exit.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button fx:id="membersButton" layoutX="637.0" mnemonicParsing="false" onAction="#membersButtonOnAction" prefHeight="64.0" prefWidth="112.0" stylesheets="@../../Styles/Admin/payment.css" text="Members">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Icons/multiple-users-silhouette.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button fx:id="logOutButton" layoutX="772.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="64.0" prefWidth="96.0" stylesheets="@../../Styles/Admin/payment.css" text="LogOut">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Icons/logout.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></Button>
+                <Button fx:id="logoButton" contentDisplay="RIGHT" layoutY="7.0" mnemonicParsing="false" onAction="#logoButtonOnAction" prefHeight="51.0" prefWidth="176.0" stylesheets="@../../Styles/Admin/payment.css" text="WhisperWeight" />
+                <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="165.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" y="-5.0">
+                    <image>
+                        <Image url="@../../Images/wind (1).png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+   <center>
+      <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="idLabel" layoutX="69.0" layoutY="41.0" text="ID" textFill="WHITE" />
+            <TextField fx:id="fNameTextField" disable="true" layoutX="69.0" layoutY="100.0" prefHeight="27.0" prefWidth="329.0" promptText="First Name" />
+            <TextField fx:id="lNameTextField" disable="true" layoutX="69.0" layoutY="161.0" prefHeight="27.0" prefWidth="329.0" promptText="Last Name" />
+            <TextField fx:id="gymSubscriptionTextField" disable="true" layoutX="69.0" layoutY="283.0" prefHeight="27.0" prefWidth="329.0" promptText="Gym Subscription" />
+            <TextField fx:id="currencyTextField" disable="true" layoutX="69.0" layoutY="344.0" prefHeight="27.0" prefWidth="46.0" text="N$" />
+            <TextField fx:id="amountTextField" alignment="CENTER_RIGHT" disable="true" layoutX="198.0" layoutY="344.0" prefHeight="27.0" prefWidth="200.0" promptText="\$$$$$" />
+            <TextField fx:id="idTextField" alignment="CENTER_RIGHT" layoutX="87.0" layoutY="39.0" prefHeight="27.0" prefWidth="46.0" promptText="00" />
+            <JFXButton fx:id="payButton" alignment="CENTER" disable="true" layoutX="69.0" layoutY="405.0" onAction="#updatePayment" prefHeight="31.0" prefWidth="332.0" text="PAY NOW" />
+            <TextField fx:id="emailTextField" disable="true" layoutX="69.0" layoutY="222.0" prefHeight="27.0" prefWidth="329.0" promptText="Email" />
+            <Button fx:id="searchButton" layoutX="134.0" layoutY="39.0" mnemonicParsing="false" onAction="#findPaymentStatus">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Icons/magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="warningLabel" layoutX="234.0" layoutY="44.0" prefHeight="17.0" prefWidth="175.0" />
+         </children></AnchorPane>
+   </center>
+   <right>
+      <AnchorPane fx:id="paymentStatusPanel" prefHeight="525.0" prefWidth="449.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="toPayLabel" disable="true" layoutX="112.0" layoutY="174.0" text="TO BE PAID" />
+            <Label fx:id="currencyLabel" disable="true" layoutX="115.0" layoutY="233.0" text="N$" />
+            <Label fx:id="amountLabel" disable="true" layoutX="227.0" layoutY="233.0" text="000" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>
