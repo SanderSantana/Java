@@ -1,0 +1,2 @@
+--module-path /home/snafer30san/Downloads/Dependencies/openjfx-23_linux-x64_bin-sdk/javafx-sdk-23/lib --add-modules javafx.controls,javafx.fxml
+

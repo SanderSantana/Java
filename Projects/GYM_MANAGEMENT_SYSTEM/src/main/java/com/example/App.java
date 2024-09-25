@@ -8,12 +8,14 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+
 public class  App extends Application {
 
 
     @Override
     //This method creates the first and only stage of the application.
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/Login.fxml")); //Loads fxml file into the stage
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("WhisperWeight Gym ApplicSanation");

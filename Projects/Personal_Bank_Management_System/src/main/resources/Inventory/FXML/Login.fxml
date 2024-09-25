@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../CSS/Login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.LoginController">
+   <top>
+      <AnchorPane prefHeight="68.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="headerLabel" fill="WHITE" layoutX="174.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which one are you?">
+               <font>
+                  <Font name="Noto Nastaliq Urdu Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="clientButton" alignment="CENTER" contentDisplay="TOP" layoutX="374.0" layoutY="68.0" onAction="#clientButton" text="CLIENT">
+               <graphic>
+                  <ImageView fitHeight="145.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="adminButton" contentDisplay="TOP" layoutX="64.0" layoutY="65.0" onAction="#adminButton" text="ADMIN">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/admin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
