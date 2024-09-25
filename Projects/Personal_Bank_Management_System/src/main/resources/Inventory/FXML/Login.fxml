@@ -23,7 +23,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton fx:id="clientButton" alignment="CENTER" contentDisplay="TOP" layoutX="374.0" layoutY="68.0" onAction="#clientButton" text="CLIENT">
+            <JFXButton fx:id="clientButton" alignment="CENTER" contentDisplay="TOP" layoutX="374.0" layoutY="68.0" onAction="#clientButtonOnAction" text="CLIENT">
                <graphic>
                   <ImageView fitHeight="145.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -32,7 +32,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="adminButton" contentDisplay="TOP" layoutX="64.0" layoutY="65.0" onAction="#adminButton" text="ADMIN">
+            <JFXButton fx:id="adminButton" contentDisplay="TOP" layoutX="64.0" layoutY="65.0" onAction="#adminButtonOnAction" text="ADMIN">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>

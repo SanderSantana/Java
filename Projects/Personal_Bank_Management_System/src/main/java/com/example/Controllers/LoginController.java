@@ -13,14 +13,14 @@ public class LoginController {
     @FXML
     private Button clientButton, adminButton;
 
-    public void clientButton(ActionEvent e) throws IOException {
+    public void clientButtonOnAction(ActionEvent e) throws IOException {
 
         ClientLoginController clientLoginController = new ClientLoginController();
         clientLoginController.clientLoginPage(e);
 
     }
 
-    public void adminButton(ActionEvent e) throws IOException {
+    public void adminButtonOnAction(ActionEvent e) throws IOException {
 
         AdminLoginController adminLoginController = new AdminLoginController();
         adminLoginController.clientLoginPage(e);
