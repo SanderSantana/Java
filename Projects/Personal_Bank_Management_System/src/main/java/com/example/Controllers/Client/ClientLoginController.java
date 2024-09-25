@@ -21,7 +21,7 @@ public class ClientLoginController {
 
         Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/User/ClientLogin.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 300, 400);
         stage.setScene(scene);
         stage.show();
 
