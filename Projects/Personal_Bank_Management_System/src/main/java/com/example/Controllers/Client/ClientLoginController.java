@@ -34,4 +34,11 @@ public class ClientLoginController {
 
     }
 
+    public void loginButtonOnAction(ActionEvent e) throws IOException {
+
+        WelcomeController welcomeController = new WelcomeController();
+        welcomeController.welcomePage(e);
+
+    }
+
 }

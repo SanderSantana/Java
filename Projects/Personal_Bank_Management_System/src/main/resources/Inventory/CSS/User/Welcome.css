@@ -1,0 +1,16 @@
+#leftLateralColumn {
+
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-border-color: #2d2d2d;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 5);*/
+
+}
+
+#body {
+
+    -fx-background-color: #e8e8e8;
+
+}

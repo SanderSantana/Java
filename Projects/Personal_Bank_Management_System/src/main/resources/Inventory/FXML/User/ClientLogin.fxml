@@ -19,7 +19,7 @@
          <children>
             <JFXTextField fx:id="usernameField" layoutX="34.0" layoutY="88.0" prefWidth="232.0" promptText="USERNAME" />
             <JFXPasswordField fx:id="passwordField" layoutX="34.0" layoutY="148.0" prefHeight="25.0" prefWidth="232.0" promptText="PASSWORD" />
-            <JFXButton fx:id="loginButton" layoutX="34.0" layoutY="210.0" prefWidth="232.0" text="LOGIN" />
+            <JFXButton fx:id="loginButton" layoutX="34.0" layoutY="210.0" onAction="#loginButtonOnAction" prefWidth="232.0" text="LOGIN" />
             <JFXButton fx:id="signinTextButton" layoutX="34.0" layoutY="25.0" prefWidth="116.0" text="LOGIN" />
             <JFXButton fx:id="registerButton" layoutX="150.0" layoutY="25.0" onAction="#registerButtonOnAction" prefWidth="116.0" text="REGISTER" />
             <Text fx:id="footerLabel" fill="WHITE" layoutX="64.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright @ 2024 CypherTrust" wrappingWidth="171.05078125" />
