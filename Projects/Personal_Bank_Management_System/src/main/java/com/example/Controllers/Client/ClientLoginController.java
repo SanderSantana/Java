@@ -27,4 +27,11 @@ public class ClientLoginController {
 
     }
 
+    public void registerButtonPage(ActionEvent e) throws IOException {
+
+        RegisterController registerController = new RegisterController();
+        registerController.registerPage(e);
+
+    }
+
 }
