@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="300.0" stylesheets="@../../CSS/User/RegisterStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.RegisterController">
+<BorderPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="300.0" styleClass="loginBorderPane" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.RegisterController">
     <top>
         <AnchorPane prefHeight="79.0" prefWidth="300.0" BorderPane.alignment="CENTER">
             <children>
-                <Text id="headerText" fx:id="headerText" fill="WHITE" layoutX="77.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CypherTrust" />
+                <Text id="headerText" fx:id="headerText" fill="WHITE" layoutX="77.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerLabel" text="CypherTrust" />
             </children></AnchorPane>
     </top>
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <JFXTextField fx:id="usernameField" layoutX="34.0" layoutY="88.0" prefWidth="232.0" promptText="USERNAME" styleClass="textField" />
-                <JFXPasswordField fx:id="passwordField" layoutX="34.0" layoutY="151.0" prefHeight="25.0" prefWidth="232.0" promptText="PASSWORD" />
-                <JFXButton fx:id="loginButton" layoutX="34.0" layoutY="340.0" prefWidth="232.0" text="REGISTER" />
-                <JFXButton fx:id="signinTextButton" layoutX="34.0" layoutY="25.0" onAction="#loginButtonOnAction" prefWidth="116.0" text="LOGIN" />
-                <JFXButton fx:id="registerButton" layoutX="150.0" layoutY="25.0" prefWidth="116.0" text="REGISTER" />
-                <Text fx:id="footerLabel" fill="WHITE" layoutX="64.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright @ 2024 CypherTrust" wrappingWidth="171.05078125" />
-            <JFXPasswordField fx:id="reEnterPasswordField" layoutX="34.0" layoutY="214.0" prefHeight="25.0" prefWidth="232.0" promptText="RE-ENTER PASSWORD" />
-            <JFXPasswordField fx:id="tokenField" layoutX="34.0" layoutY="277.0" prefHeight="25.0" prefWidth="232.0" promptText="TOKEN" />
+                <JFXTextField fx:id="usernameField" layoutX="34.0" layoutY="88.0" prefWidth="232.0" promptText="USERNAME" styleClass="formField" />
+                <JFXPasswordField fx:id="passwordField" layoutX="34.0" layoutY="151.0" prefHeight="25.0" prefWidth="232.0" promptText="PASSWORD" styleClass="formField" />
+                <JFXButton fx:id="loginButton" layoutX="34.0" layoutY="340.0" prefWidth="232.0" styleClass="submitButton" text="REGISTER" />
+                <JFXButton fx:id="signinTextButton" layoutX="34.0" layoutY="25.0" onAction="#loginButtonOnAction" prefWidth="116.0" styleClass="hollowButton" text="LOGIN" />
+                <JFXButton fx:id="registerButton" layoutX="150.0" layoutY="25.0" prefWidth="116.0" styleClass="filledButton" text="REGISTER" />
+                <Text fx:id="footerLabel" fill="WHITE" layoutX="64.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="footerLabel" text="Copyright @ 2024 CypherTrust" wrappingWidth="171.05078125" />
+            <JFXPasswordField fx:id="reEnterPasswordField" layoutX="34.0" layoutY="214.0" prefHeight="25.0" prefWidth="232.0" promptText="RE-ENTER PASSWORD" styleClass="formField" />
+            <JFXPasswordField fx:id="tokenField" layoutX="34.0" layoutY="277.0" prefHeight="25.0" prefWidth="232.0" promptText="TOKEN" styleClass="formField" />
             </children></AnchorPane>
     </center>
 </BorderPane>

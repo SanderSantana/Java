@@ -33,5 +33,12 @@ public class transferController {
 
     }
 
+    public void dashboardButtonOnAction(ActionEvent e) throws IOException{
+
+       WelcomeController welcomeController = new WelcomeController();
+       welcomeController.welcomePage(e);
+
+    }
+
 
 }

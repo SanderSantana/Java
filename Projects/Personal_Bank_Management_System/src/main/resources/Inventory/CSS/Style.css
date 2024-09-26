@@ -1,0 +1,282 @@
+.loginBorderPane {
+
+    -fx-background-color: #14122A;
+
+}
+
+.headerLabel {
+
+    -fx-font-size: 2em;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+
+}
+
+.formField {
+
+    -fx-border-color: #A8A892;
+    -fx-padding: 10px;
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+    -fx-prompt-text-fill: #A8A892;
+
+
+}
+
+
+.card {
+
+    -fx-border-color: black;
+    -fx-background-color: #14122A;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.29), 10, 0, 0, 5);
+
+}
+
+
+
+.footerLabel {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+
+}
+
+.submitButton {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-background-color: #A8A892;
+    -fx-padding: 10px;
+    -fx-border-color: #A8A892;
+    -fx-border-width: 2px;
+
+}
+
+.hollowButton {
+
+    -fx-border-color: #A8A892;
+    -fx-padding: 10px;
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+    -fx-font-family: "Arial Black";
+
+
+}
+
+.filledButton{
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-background-color: #A8A892;
+    -fx-padding: 10px;
+    -fx-border-color: #A8A892;
+    -fx-border-width: 2px;
+
+}
+
+.leftLateralColumn {
+
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    /*-fx-border-color: #2d2d2d;*/
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 5);
+
+}
+
+.bankNameLabel {
+
+    /*-fx-font-family: "Arial Rounded MT Bold";*/
+    -fx-font-weight: bold;
+
+
+}
+
+.bodyColor {
+
+    -fx-background-color: #e8e8e8;
+
+}
+
+.navUpperButton {
+
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.29), 10, 0, 0, 5);
+    -fx-font-family: "Arial";
+
+}
+
+.navLowerButton {
+
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-border-width: 2px;
+    -fx-background-color: #14122A;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.29), 10, 0, 0, 5);
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+
+}
+
+.headerMessage {
+
+    -fx-font-family: "ui-sans-serif";
+    -fx-text-fill:  #14122A;
+    -fx-font-weight: bold;
+
+}
+
+.amountLabel {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+
+}
+
+.positiveAmountLabel {
+
+    -fx-text-fill: green;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 2em;
+
+}
+
+.negativeAmountLabel {
+
+    -fx-text-fill: #b40000;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 2em;
+
+}
+
+.smallHeaderLabel {
+
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+
+
+}
+
+.typeOfCardLabel {
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+    -fx-font-size: 15px;
+
+}
+
+.cardDigits {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 15px;
+}
+
+.cardExpiryDate {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 10px;
+
+}
+
+.transitionBox {
+
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.29), 10, 0, 0, 5);
+    -fx-font-family: "Arial";
+
+
+}
+
+.formFieldAlternative {
+
+    -fx-border-width: 2px;
+    -fx-border-color: #14122A;
+   -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-prompt-text-fill: #14122A;
+
+
+}
+
+#payButton {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-background-color:  #A8A892;
+    -fx-border-color:  #14122A;
+    -fx-border-width: 2px;
+
+
+}
+
+#resetButton {
+
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-background-color:  #A8A892;
+    -fx-border-color:  #14122A;
+    -fx-border-width: 2px;
+
+
+
+}
+
+
+
+#adminButton {
+
+    -fx-text-fill: white;
+
+}
+
+#adminButton:focused {
+
+    -fx-border-color: transparent;
+
+}
+
+#adminButton:hover {
+
+    -fx-background-color: #0b0715;
+
+
+}
+
+#clientButton {
+
+    -fx-text-fill: white;
+
+
+}
+
+#clientButton:focused {
+
+
+    -fx-border-color: transparent;
+
+}
+
+#clientButton:hover {
+
+    -fx-background-color: #0b0715;
+
+}
+

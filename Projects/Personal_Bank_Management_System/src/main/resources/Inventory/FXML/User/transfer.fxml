@@ -13,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../../CSS/User/transfer.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.transferController">
+<AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.transferController">
     <children>
-        <VBox fx:id="leftLateralColumn" layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0">
+        <VBox  layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0" styleClass="leftLateralColumn" stylesheets="@../../CSS/Style.css">
             <children>
                 <AnchorPane prefHeight="484.0" prefWidth="149.0">
                     <children>
@@ -24,12 +24,12 @@
                                 <Image url="@../../Icons/bank-building.png" />
                             </image>
                         </ImageView>
-                        <Text fx:id="bankNameLabel" layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CypherTrust Bank" textAlignment="CENTER" wrappingWidth="119.96484375">
+                        <Text  layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerMessage" text="CypherTrust Bank" textAlignment="CENTER" wrappingWidth="119.96484375">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <JFXButton fx:id="dashboardButton" focusTraversable="false" layoutX="18.0" layoutY="130.0" prefHeight="38.0" prefWidth="120.0" text="  Dashboard">
+                        <JFXButton  focusTraversable="false" layoutX="18.0" layoutY="130.0" onAction="#dashboardButtonOnAction" prefHeight="38.0" prefWidth="120.0" styleClass="navUpperButton" text="  Dashboard">
                             <graphic>
                                 <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -38,7 +38,7 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="transactionButton" layoutX="18.0" layoutY="184.0" prefHeight="41.0" prefWidth="120.0" text="Transactions">
+                        <JFXButton  layoutX="18.0" layoutY="184.0" prefHeight="41.0" prefWidth="120.0" styleClass="navUpperButton" text="Transactions">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -47,7 +47,7 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="profileButton" layoutX="18.0" layoutY="351.0" prefHeight="38.0" prefWidth="113.0" text="  PROFILE">
+                        <JFXButton  layoutX="18.0" layoutY="351.0" prefHeight="38.0" prefWidth="113.0" styleClass="navLowerButton" text="  PROFILE">
                             <graphic>
                                 <ImageView fitHeight="18.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -56,7 +56,7 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="sendMoneyButton" layoutX="18.0" layoutY="242.0" prefHeight="42.0" prefWidth="120.0" text="Send Money">
+                        <JFXButton  layoutX="18.0" layoutY="242.0" prefHeight="42.0" prefWidth="120.0" styleClass="navUpperButton" text="Send Money">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -65,7 +65,7 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="logoutButton" layoutX="18.0" layoutY="404.0" onAction="#logoutButtonOnAction" prefHeight="38.0" prefWidth="113.0" text="LOGOUT">
+                        <JFXButton  layoutX="18.0" layoutY="404.0" onAction="#logoutButtonOnAction" prefHeight="38.0" prefWidth="113.0" styleClass="navLowerButton" text="LOGOUT">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -79,14 +79,14 @@
                 </AnchorPane>
             </children>
         </VBox>
-        <Label fx:id="clientNameLabel" layoutX="195.0" layoutY="13.0" prefHeight="43.0" prefWidth="216.0" text="Pay &amp; Transfer">
+        <Label  layoutX="195.0" layoutY="13.0" prefHeight="43.0" prefWidth="216.0" styleClass="headerMessage" text="Pay &amp; Transfer">
             <font>
                 <Font size="29.0" />
             </font>
         </Label>
-        <HBox fx:id="checkingAccount" layoutX="200.0" layoutY="116.0" prefHeight="155.0" prefWidth="260.0">
+        <HBox  layoutX="196.0" layoutY="140.0" prefHeight="155.0" prefWidth="260.0">
             <children>
-                <AnchorPane prefHeight="153.0" prefWidth="263.0">
+                <AnchorPane prefHeight="153.0" prefWidth="263.0" styleClass="card">
                     <children>
                         <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="206.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -98,21 +98,21 @@
                                 <Image url="@../../Icons/card.png" />
                             </image>
                         </ImageView>
-                        <Label fx:id="debitLabel" layoutX="14.0" layoutY="18.0" text="Debit" />
-                        <Label fx:id="debitDigits" layoutX="14.0" layoutY="90.0" text="*****" />
-                        <Label fx:id="debitDigits1" layoutX="67.0" layoutY="90.0" text="*****" />
-                        <Label fx:id="debitDigits2" layoutX="119.0" layoutY="90.0" text="*****" />
-                        <Label fx:id="debitDigits3" layoutX="167.0" layoutY="90.0" text="5478" />
-                        <Label fx:id="debitDate" layoutX="92.0" layoutY="113.0" text="08/27" />
-                        <Label fx:id="moneySignCardLabel" layoutX="44.0" layoutY="62.0" text="N$" />
-                        <Label fx:id="debitMoneyLabel" layoutX="88.0" layoutY="62.0" text="4500.00" />
+                        <Label  layoutX="14.0" layoutY="18.0" styleClass="typeOfCardLabel" text="Debit" />
+                        <Label  layoutX="14.0" layoutY="90.0" styleClass="cardDigits" text="*****" />
+                        <Label  layoutX="67.0" layoutY="90.0" styleClass="cardDigits" text="*****" />
+                        <Label  layoutX="119.0" layoutY="90.0" styleClass="cardDigits" text="*****" />
+                        <Label  layoutX="167.0" layoutY="90.0" styleClass="cardDigits" text="5478" />
+                        <Label  layoutX="92.0" layoutY="113.0" styleClass="cardExpiryDate" text="08/27" />
+                        <Label  layoutX="44.0" layoutY="62.0" styleClass="amountLabel" text="N$" />
+                        <Label  layoutX="88.0" layoutY="62.0" styleClass="amountLabel" text="4500.00" />
                     </children>
                 </AnchorPane>
             </children>
         </HBox>
-        <HBox fx:id="savingsAccount" layoutX="507.0" layoutY="116.0" prefHeight="155.0" prefWidth="260.0">
+        <HBox fx:id="savingsAccount" layoutX="196.0" layoutY="315.0" prefHeight="155.0" prefWidth="260.0">
             <children>
-                <AnchorPane prefHeight="153.0" prefWidth="263.0">
+                <AnchorPane prefHeight="153.0" prefWidth="263.0" styleClass="card">
                     <children>
                         <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="207.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -124,25 +124,36 @@
                                 <Image url="@../../Icons/card.png" />
                             </image>
                         </ImageView>
-                        <Label fx:id="savingsLabel" layoutX="15.0" layoutY="20.0" text="Savings" />
-                        <Label fx:id="savingsDigits" layoutX="26.0" layoutY="92.0" text="*****" />
-                        <Label fx:id="savingsDigits1" layoutX="79.0" layoutY="92.0" text="*****" />
-                        <Label fx:id="savingsDigits2" layoutX="131.0" layoutY="92.0" text="*****" />
-                        <Label fx:id="savingsDigits3" layoutX="179.0" layoutY="92.0" text="4569" />
-                        <Label fx:id="savingsDate" layoutX="93.0" layoutY="115.0" text="08/27" />
-                        <Label fx:id="moneySignCardLabel" layoutX="47.0" layoutY="62.0" text="N$" />
-                        <Label fx:id="savingsMoneyLabel" layoutX="92.0" layoutY="62.0" text="4500.00" />
+                        <Label  layoutX="15.0" layoutY="20.0" styleClass="typeOfCardLabel" text="Savings" />
+                        <Label  layoutX="26.0" layoutY="92.0" styleClass="cardDigits" text="*****" />
+                        <Label  layoutX="79.0" layoutY="92.0" styleClass="cardDigits" text="*****" />
+                        <Label  layoutX="131.0" layoutY="92.0" styleClass="cardDigits" text="*****" />
+                        <Label layoutX="179.0" layoutY="92.0" styleClass="cardDigits" text="4569" />
+                        <Label layoutX="93.0" layoutY="115.0" styleClass="cardExpiryDate" text="08/27" />
+                        <Label  layoutX="47.0" layoutY="62.0" styleClass="amountLabel" text="N$" />
+                        <Label  layoutX="92.0" layoutY="62.0" styleClass="amountLabel" text="4500.00" />
                     </children>
                 </AnchorPane>
             </children>
         </HBox>
-        <Label fx:id="accountsLabel" layoutX="200.0" layoutY="80.0" text="Choose Account" />
-      <ChoiceBox id="accountSelector" fx:id="accountSelector" layoutX="316.0" layoutY="73.0" prefWidth="150.0" />
-      <JFXTextField layoutX="197.0" layoutY="303.0" prefHeight="37.0" prefWidth="258.0" promptText="First Name" styleClass="usernameField" stylesheets="@../../CSS/User/RegisterStyle.css" />
-      <JFXTextField layoutX="197.0" layoutY="364.0" prefHeight="37.0" prefWidth="258.0" promptText="Last Name" styleClass="usernameField" stylesheets="@../../CSS/User/RegisterStyle.css" />
-      <JFXTextField layoutX="197.0" layoutY="426.0" prefHeight="37.0" prefWidth="258.0" promptText="Account Number" styleClass="usernameField" stylesheets="@../../CSS/User/RegisterStyle.css" />
-      <JFXTextField layoutX="508.0" layoutY="303.0" prefHeight="37.0" prefWidth="258.0" promptText="N$" styleClass="usernameField" stylesheets="@../../CSS/User/RegisterStyle.css" />
-      <JFXButton layoutX="508.0" layoutY="368.0" styleClass="usernameField" stylesheets="@../../CSS/User/RegisterStyle.css" text="Pay" />
-      <JFXButton layoutX="576.0" layoutY="368.0" styleClass="usernameField" stylesheets="@../../CSS/User/RegisterStyle.css" text="Reset" />
+        <Label  layoutX="200.0" layoutY="80.0" styleClass="smallHeaderLabel" text="Choose Account" />
+      <ChoiceBox id="accountSelector" fx:id="accountSelector" layoutX="303.0" layoutY="75.0" prefWidth="150.0" />
+      <VBox layoutX="487.0" prefHeight="500.0" prefWidth="313.0" styleClass="loginBorderPane">
+         <children>
+            <AnchorPane prefHeight="504.0" prefWidth="313.0">
+               <children>
+                  <JFXTextField layoutX="28.0" layoutY="23.0" prefHeight="37.0" prefWidth="258.0" promptText="Beneficiary" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="330.0" prefHeight="37.0" prefWidth="258.0" promptText="Account Number" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="85.0" prefHeight="37.0" prefWidth="258.0" promptText="Branch Code" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="147.0" prefHeight="37.0" prefWidth="258.0" promptText="Reference" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="209.0" prefHeight="37.0" prefWidth="258.0" promptText="Email" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="270.0" prefHeight="37.0" prefWidth="258.0" promptText="Phone Number" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="392.0" prefHeight="37.0" prefWidth="258.0" promptText="N$" styleClass="formField" />
+                  <JFXButton fx:id="payButton" layoutX="138.0" layoutY="447.0" prefHeight="38.0" prefWidth="68.0" text="Pay" />
+                  <JFXButton fx:id="resetButton" layoutX="218.0" layoutY="447.0" prefHeight="38.0" prefWidth="68.0" styleClass="usernameField" text="Reset" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>
