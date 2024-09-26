@@ -1,5 +1,6 @@
 package com.example.Controllers.Client;
 
+import com.example.Controllers.LoginController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +25,13 @@ public class WelcomeController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+    }
+
+    public void logoutButtonOnAction(ActionEvent e) throws IOException {
+
+       ClientLoginController clientLoginController = new ClientLoginController();
+       clientLoginController.clientLoginPage(e);
 
     }
 
