@@ -35,4 +35,11 @@ public class WelcomeController {
 
     }
 
+    public void sendMoneyButtonOnAction(ActionEvent e) throws IOException {
+
+        transferController transferController = new transferController();
+        transferController.transferPage(e);
+
+    }
+
 }

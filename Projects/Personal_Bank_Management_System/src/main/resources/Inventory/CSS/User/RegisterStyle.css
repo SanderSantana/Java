@@ -54,6 +54,16 @@
 
 }
 
+.usernameField {
+
+    -fx-border-color:  #14122A;
+    -fx-padding: 10px;
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+
+
+}
+
 #passwordField {
 
     -fx-border-color: #A8A892;

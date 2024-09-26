@@ -55,7 +55,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="sendMoneyButton" layoutX="18.0" layoutY="242.0" prefHeight="42.0" prefWidth="120.0" text="Send Money">
+                  <JFXButton fx:id="sendMoneyButton" layoutX="18.0" layoutY="242.0" onAction="#sendMoneyButtonOnAction" prefHeight="42.0" prefWidth="120.0" text="Send Money">
                      <graphic>
                         <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
