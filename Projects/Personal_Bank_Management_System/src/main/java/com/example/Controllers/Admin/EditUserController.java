@@ -8,33 +8,38 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
 import java.io.IOException;
 
-public class CreateUsersController {
+public class EditUserController {
 
     @FXML
     private Stage stage;
-    public void CreateUsersPage(ActionEvent e) throws IOException {
+    @FXML
+    private Scene scene;
 
-        Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/Admin/CreateUsers.fxml"));
+    public void EditUserPage(ActionEvent e) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/Admin/EditUser.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
+
     }
 
-    public void logoutButtonOnAction(ActionEvent e) throws IOException {
+    public void CreateButtonOnAction(ActionEvent e) throws IOException {
+
+        CreateUsersController createUsersController = new CreateUsersController();
+        createUsersController.CreateUsersPage(e);
+
+    }
+
+    public void logoutButtonOnAction(ActionEvent e)throws IOException {
 
         AdminLoginController adminLoginController = new AdminLoginController();
         adminLoginController.AdminLoginPage(e);
-
-    }
-
-    public void editButtonOnAction(ActionEvent e) throws IOException {
-
-        EditUserController editUserController = new EditUserController();
-        editUserController.EditUserPage(e);
 
     }
 
