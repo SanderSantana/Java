@@ -168,6 +168,15 @@
 
 }
 
+.smallHeaderAlternativeLabel {
+
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+
+}
+
 .typeOfCardLabel {
 
     -fx-text-fill: white;

@@ -23,7 +23,7 @@ public class LoginController {
     public void adminButtonOnAction(ActionEvent e) throws IOException {
 
         AdminLoginController adminLoginController = new AdminLoginController();
-        adminLoginController.clientLoginPage(e);
+        adminLoginController.AdminLoginPage(e);
 
     }
 

@@ -1,6 +1,5 @@
 package com.example.Controllers.Client;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class transferController {
+public class TransferController {
 
     @FXML
     private Stage stage;
@@ -37,6 +36,20 @@ public class transferController {
 
        WelcomeController welcomeController = new WelcomeController();
        welcomeController.welcomePage(e);
+
+    }
+
+    public void profileButtonOnAction(ActionEvent e) throws IOException {
+
+       ProfileController profileController = new ProfileController();
+       profileController.profilePage(e);
+
+    }
+
+    public void sendMoneyButtonOnAction(ActionEvent e) throws IOException {
+
+        TransferController transferController = new TransferController();
+        transferController.transferPage(e);
 
     }
 
