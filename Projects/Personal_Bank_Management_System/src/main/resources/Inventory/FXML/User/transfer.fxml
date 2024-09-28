@@ -144,8 +144,8 @@
                <children>
                   <JFXTextField layoutX="28.0" layoutY="23.0" prefHeight="37.0" prefWidth="258.0" promptText="Beneficiary" styleClass="formField" />
                   <JFXTextField layoutX="28.0" layoutY="330.0" prefHeight="37.0" prefWidth="258.0" promptText="Account Number" styleClass="formField" />
-                  <JFXTextField layoutX="28.0" layoutY="85.0" prefHeight="37.0" prefWidth="258.0" promptText="Branch Code" styleClass="formField" />
-                  <JFXTextField layoutX="28.0" layoutY="147.0" prefHeight="37.0" prefWidth="258.0" promptText="Reference" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="85.0" prefHeight="37.0" prefWidth="258.0" promptText="My Reference" styleClass="formField" />
+                  <JFXTextField layoutX="28.0" layoutY="147.0" prefHeight="37.0" prefWidth="258.0" promptText="Their Reference" styleClass="formField" />
                   <JFXTextField layoutX="28.0" layoutY="209.0" prefHeight="37.0" prefWidth="258.0" promptText="Email" styleClass="formField" />
                   <JFXTextField layoutX="28.0" layoutY="270.0" prefHeight="37.0" prefWidth="258.0" promptText="Phone Number" styleClass="formField" />
                   <JFXTextField layoutX="28.0" layoutY="392.0" prefHeight="37.0" prefWidth="258.0" promptText="N$" styleClass="formField" />
