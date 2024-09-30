@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="loginBorderPane" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Admin.CreateUsersController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="loginBorderPane" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Admin.CreateUsersController">
     <children>
         <VBox layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0" styleClass="leftLateralColumn">
             <children>
@@ -31,11 +31,11 @@
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <JFXButton focusTraversable="false" layoutX="18.0" layoutY="130.0" prefHeight="38.0" prefWidth="120.0" styleClass="navUpperButton" text="Create">
+                        <JFXButton focusTraversable="false" layoutX="18.0" layoutY="130.0" prefHeight="38.0" prefWidth="120.0" styleClass="activePageNavButton" text="Create">
                             <graphic>
                                 <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../Icons/create%20user.png" />
+                                        <Image url="@../../Icons/add-user.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -84,31 +84,41 @@
             </font>
         </Label>
         <Label layoutX="200.0" layoutY="88.0" styleClass="smallHeaderAlternativeLabel" text="Account Number" />
+        <JFXTextField fx:id="accountNumber" editable="false" layoutX="200.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
         <HBox layoutX="200.0" layoutY="316.0" prefHeight="38.0" prefWidth="260.0" />
-        <JFXTextField layoutX="200.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
         <Label layoutX="200.0" layoutY="166.0" styleClass="smallHeaderAlternativeLabel" text="First Name" />
-        <JFXTextField layoutX="200.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+        <JFXTextField fx:id="firstName" layoutX="200.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
         <Label layoutX="200.0" layoutY="249.0" styleClass="smallHeaderAlternativeLabel" text="Last Name" />
-        <JFXTextField layoutX="200.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-        <Label layoutX="200.0" layoutY="411.0" styleClass="smallHeaderAlternativeLabel" text="Phone Number" />
-        <JFXTextField layoutX="200.0" layoutY="432.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+        <JFXTextField fx:id="lastName" layoutX="200.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
         <Label layoutX="200.0" layoutY="335.0" styleClass="smallHeaderAlternativeLabel" text="Email" />
-        <JFXTextField layoutX="200.0" layoutY="356.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+        <JFXTextField fx:id="email" layoutX="200.0" layoutY="356.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+        <Label layoutX="200.0" layoutY="411.0" styleClass="smallHeaderAlternativeLabel" text="Phone Number" />
+        <JFXTextField fx:id="phoneNumber" layoutX="200.0" layoutY="432.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
         <Label layoutX="522.0" layoutY="166.0" styleClass="smallHeaderAlternativeLabel" text="Accounts" />
         <Label layoutX="527.0" layoutY="251.0" styleClass="smallHeaderAlternativeLabel" text="Gender" />
-        <JFXButton fx:id="payButton" layoutX="591.0" layoutY="414.0" prefHeight="25.0" prefWidth="64.0" text="Enter" />
-      <JFXRadioButton layoutX="519.0" layoutY="199.0" text="Savings" textFill="WHITE" />
-      <JFXRadioButton layoutX="659.0" layoutY="199.0" text="Credit" textFill="WHITE" />
-      <JFXRadioButton layoutX="522.0" layoutY="286.0" text="Male" textFill="WHITE">
+        <JFXButton fx:id="payButton" layoutX="591.0" layoutY="414.0" onAction="#createUser" prefHeight="25.0" prefWidth="64.0" text="Enter" />
+      <JFXRadioButton fx:id="savings" layoutX="519.0" layoutY="199.0" text="Savings" textFill="WHITE" />
+      <JFXRadioButton fx:id="credit" layoutX="659.0" layoutY="199.0" text="Credit" textFill="WHITE" />
+      <JFXRadioButton fx:id="male" layoutX="522.0" layoutY="286.0" text="Male" textFill="WHITE">
          <toggleGroup>
             <ToggleGroup fx:id="gender" />
          </toggleGroup>
       </JFXRadioButton>
-      <JFXRadioButton layoutX="659.0" layoutY="286.0" prefHeight="17.0" prefWidth="73.0" text="Female" textFill="WHITE" toggleGroup="$gender" />
-      <DatePicker layoutX="527.0" layoutY="356.0" prefHeight="25.0" prefWidth="210.0" />
+      <JFXRadioButton fx:id="female" layoutX="659.0" layoutY="286.0" prefHeight="17.0" prefWidth="73.0" text="Female" textFill="WHITE" toggleGroup="$gender" />
+      <DatePicker fx:id="dateOfBirth" layoutX="527.0" layoutY="356.0" prefHeight="25.0" prefWidth="210.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="527.0" layoutY="327.0" styleClass="smallHeaderAlternativeLabel" text="Date of Birth" />
-      <JFXButton fx:id="resetButton" layoutX="670.0" layoutY="414.0" prefHeight="17.0" prefWidth="68.0" text="Reset" />
+      <JFXButton fx:id="resetButton" layoutX="670.0" layoutY="414.0" onAction="#resetButtonOnAction" prefHeight="17.0" prefWidth="68.0" text="Reset" />
       <Label layoutX="518.0" layoutY="88.0" styleClass="smallHeaderAlternativeLabel" text="Token" />
-      <JFXTextField layoutX="518.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXTextField fx:id="token" editable="false" layoutX="518.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <Label fx:id="warning" layoutX="408.0" layoutY="57.0" prefHeight="17.0" prefWidth="104.0" styleClass="warning" text="Error Occurred" visible="false" />
+      <JFXButton fx:id="refreshButton" accessibleRole="IMAGE_VIEW" contentDisplay="GRAPHIC_ONLY" layoutX="556.0" layoutY="83.0" onAction="#randomToken">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="14.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../Icons/generate.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
     </children>
 </AnchorPane>

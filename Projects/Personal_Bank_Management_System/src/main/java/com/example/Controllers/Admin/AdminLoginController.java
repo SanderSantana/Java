@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -27,7 +28,8 @@ public class AdminLoginController {
     private TextField usernameField;
     @FXML
     private PasswordField passwordField;
-
+    @FXML
+    private Label warningLabel;
     public void AdminLoginPage(ActionEvent e) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/Admin/AdminLogin.fxml"));
@@ -70,8 +72,7 @@ public class AdminLoginController {
                 }
                 else {
 
-//                    loginWarningLabel.setText("Invalid Login");
-//                    loginWarningLabel.setStyle("-fx-text-fill: red;" + "-fx-font-weight: bold;" + "-fx-font-size: 14");
+                    warningLabel.setVisible(true);
 
                 }
 

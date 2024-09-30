@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class DepositController {
 
@@ -27,7 +28,7 @@ public class DepositController {
 
     }
 
-    public void createButtonOnAction(ActionEvent e)throws IOException {
+    public void createButtonOnAction(ActionEvent e) throws IOException, SQLException {
 
         CreateUsersController createUsersController = new CreateUsersController();
         createUsersController.CreateUsersPage(e);

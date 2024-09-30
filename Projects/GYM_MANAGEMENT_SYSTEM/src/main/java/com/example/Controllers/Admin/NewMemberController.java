@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 
-public class NewMemberController {
+public class    NewMemberController {
 
     @FXML
     private Stage stage;

@@ -103,6 +103,19 @@
 
 }
 
+.activePageNavButton {
+
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-border-width: 2px;
+    -fx-background-color: #14122A;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.29), 10, 0, 0, 5);
+    -fx-font-family: "Arial";
+
+}
+
 .navUpperButton {
 
     -fx-border-radius: 5px;
@@ -222,6 +235,13 @@
     -fx-background-radius: 5px;
     -fx-prompt-text-fill: #14122A;
 
+
+}
+
+.warning {
+
+    -fx-text-fill: #ff0000;
+    -fx-font-family: "Arial Black";
 
 }
 
