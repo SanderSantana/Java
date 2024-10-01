@@ -65,7 +65,7 @@ public class CreateUsersController {
     @FXML
     private DatePicker dateOfBirth;
     @FXML
-    private ToggleGroup gender, typeOfAccount;
+    private ToggleGroup gender;
     @FXML
     private Label warning;
 
@@ -138,6 +138,7 @@ public class CreateUsersController {
         savings.setSelected(false);
         credit.setSelected(false);
         gender.getSelectedToggle().setSelected(false);
+        dateOfBirth.getEditor().clear();
 
 
     }

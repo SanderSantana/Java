@@ -96,7 +96,7 @@
         <JFXTextField fx:id="email" disable="true" editable="false" layoutX="200.0" layoutY="356.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
         <Label layoutX="520.0" layoutY="95.0" styleClass="smallHeaderAlternativeLabel" text="Accounts" />
         <Label layoutX="525.0" layoutY="180.0" styleClass="smallHeaderAlternativeLabel" text="Gender" />
-        <JFXButton fx:id="payButton" layoutX="589.0" layoutY="343.0" prefHeight="25.0" prefWidth="64.0" text="Save" />
+        <JFXButton fx:id="payButton" layoutX="589.0" layoutY="343.0" onAction="#updateUserDetails" prefHeight="25.0" prefWidth="64.0" text="Save" />
         <JFXRadioButton fx:id="savings" disable="true" layoutX="517.0" layoutY="128.0" text="Savings" textFill="WHITE" />
         <JFXRadioButton fx:id="credit" disable="true" layoutX="657.0" layoutY="128.0" text="Credit" textFill="WHITE" />
         <JFXRadioButton fx:id="male" disable="true" layoutX="520.0" layoutY="215.0" text="Male" textFill="WHITE">
@@ -107,8 +107,8 @@
         <JFXRadioButton fx:id="female" disable="true" layoutX="657.0" layoutY="215.0" prefHeight="17.0" prefWidth="73.0" text="Female" textFill="WHITE" toggleGroup="$gender" />
         <DatePicker fx:id="date" disable="true" layoutX="525.0" layoutY="285.0" prefHeight="25.0" prefWidth="210.0" />
         <Label layoutX="525.0" layoutY="256.0" styleClass="smallHeaderAlternativeLabel" text="Date of Birth" />
-        <JFXButton fx:id="resetButton" layoutX="668.0" layoutY="343.0" prefHeight="17.0" prefWidth="68.0" text="Reset" />
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="354.0" layoutY="111.0" onAction="#fetchInformation" prefHeight="38.0" prefWidth="46.0">
+        <JFXButton fx:id="resetButton" layoutX="668.0" layoutY="343.0" onAction="#resetButtonOnAction" prefHeight="17.0" prefWidth="68.0" text="Reset" />
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="354.0" layoutY="111.0" onAction="#UserDetails" prefHeight="38.0" prefWidth="46.0">
          <graphic>
             <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -117,5 +117,6 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <Label fx:id="warning" layoutX="411.0" layoutY="71.0" styleClass="warning" text="Error Occurred" visible="false" />
     </children>
 </AnchorPane>
