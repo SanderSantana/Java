@@ -29,40 +29,11 @@ SELECT FirstName, LastName,  Email, PhoneNumber, Gender, DateOfBirth FROM UserPr
 SELECT AccountType FROM Account WHERE UserID = 3;
 
 -- 3. Update the information of the user
-UPDATE UserProfile SET FirstName = 'Rui', LastName = 'Evaristo', Email = 'yakelui2000@hotmail.com', PhoneNumber = '935951538', Gender = 'Male', DateOfBirth = '1960-05-10' WHERE UserID = 2;
+UPDATE UserProfile SET FirstName = 'Pai', LastName = 'Evaristo', Email = 'yakelui2000@hotmail.com', PhoneNumber = '935951538', Gender = 'Male', DateOfBirth = '1960-05-10' WHERE UserID = 2;
 
-    
-    
-    
---     Check if Admin Exists
-SELECT COUNT(1) FROM Admin WHERE Username = 'snafer30san' AND Password = 'Ss32566565';
+-- DEPOSITING MONEY TO USER'S ACCOUNT --
+-- 1. Fetch the required Details of user based on the Account Number 
+SELECT FirstName, LastName, Balance FROM Account INNER JOIN UserProfile ON Account.UserID = UserProfile.UserID WHERE AccountNumber = '600000000' AND AccountType = 'Credit';
 
--- GET BALACEND BASED ON ACCOUNT NUMBER AND TYPE OF ACCOUNT
-SELECT UserProfile.FirstName, UserProfile.LastName, Account.Balance 
-FROM UserProfile 
-INNER JOIN Account ON UserProfile.Username = Account.Username
-WHERE AccountNumber = '600094824' AND AccountType = 'Savings'; 
-
--- Deposit Amount
-UPDATE Account
-SET Balance = 1000
-WHERE AccountNumber = 600094824  AND AccountType = 'Savings';
-
-SELECT AccountNumber
-FROM Account
-ORDER BY created_at DESC
-LIMIT 1;
-
-SELECT FirstName, LastName, DateOfBirth, Gender, PhoneNumber, Email, Account.AccountType
-FROM UserProfile 
-INNER JOIN Account ON Account.Username = UserProfile.Username
-WHERE AccountNumber = '111094827'
-
-
--- UPDATE USER PROFILE
-    -- Check if user exists
-    SELECT COUNT(1) FROM UserProfile WHERE Username = 'snafer30san' AND Password = '123456'
-        
-    
-    SELECT firstName, 
-    
+-- 2. Update amount
+UPDATE Account SET Balance = '100' WHERE AccountNumber = '600000000' AND AccountType = 'Credit';

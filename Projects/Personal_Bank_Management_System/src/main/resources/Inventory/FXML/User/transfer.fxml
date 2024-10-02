@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.TransferController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.TransferController">
     <children>
         <VBox layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0" styleClass="leftLateralColumn" stylesheets="@../../CSS/Style.css">
             <children>
@@ -56,11 +56,11 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="18.0" layoutY="242.0" onAction="#sendMoneyButtonOnAction" prefHeight="42.0" prefWidth="120.0" styleClass="navUpperButton" text="Send Money">
+                        <JFXButton layoutX="18.0" layoutY="242.0" onAction="#sendMoneyButtonOnAction" prefHeight="42.0" prefWidth="120.0" styleClass="activePageNavButton" text="Send Money">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../Icons/bank-transfer.png" />
+                                        <Image url="@../../Icons/bank-transfer1.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
