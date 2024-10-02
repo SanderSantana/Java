@@ -18,14 +18,14 @@
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
+                <JFXButton fx:id="signinTextButton" layoutX="34.0" layoutY="25.0" onAction="#loginButtonOnAction" prefWidth="116.0" styleClass="hollowButton" text="LOGIN" />
+                <JFXButton layoutX="150.0" layoutY="25.0" prefWidth="116.0" styleClass="filledButton" text="REGISTER" />
                 <JFXTextField fx:id="usernameField" layoutX="34.0" layoutY="88.0" prefWidth="232.0" promptText="USERNAME" styleClass="formField" />
                 <JFXPasswordField fx:id="passwordField" layoutX="34.0" layoutY="151.0" prefHeight="25.0" prefWidth="232.0" promptText="PASSWORD" styleClass="formField" />
-                <JFXButton fx:id="registerButtonOnAction" layoutX="34.0" layoutY="340.0" prefWidth="232.0" styleClass="submitButton" text="REGISTER" />
-                <JFXButton fx:id="signinTextButton" layoutX="34.0" layoutY="25.0" onAction="#loginButtonOnAction" prefWidth="116.0" styleClass="hollowButton" text="LOGIN" />
-                <JFXButton fx:id="registerButton" layoutX="150.0" layoutY="25.0" prefWidth="116.0" styleClass="filledButton" text="REGISTER" />
-                <Text fx:id="footerLabel" fill="WHITE" layoutX="64.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="footerLabel" text="Copyright @ 2024 CypherTrust" wrappingWidth="171.05078125" />
             <JFXPasswordField fx:id="reEnterPasswordField" layoutX="34.0" layoutY="214.0" prefHeight="25.0" prefWidth="232.0" promptText="RE-ENTER PASSWORD" styleClass="formField" />
             <JFXPasswordField fx:id="tokenField" layoutX="34.0" layoutY="277.0" prefHeight="25.0" prefWidth="232.0" promptText="TOKEN" styleClass="formField" />
+                <JFXButton fx:id="registerButton" layoutX="34.0" layoutY="340.0" onAction="#registerButtonOnAction" prefWidth="232.0" styleClass="submitButton" text="REGISTER" />
+                <Text fx:id="footerLabel" fill="WHITE" layoutX="64.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="footerLabel" text="Copyright @ 2024 CypherTrust" wrappingWidth="171.05078125" />
             <Label fx:id="warningLabel" layoutX="101.0" layoutY="6.0" styleClass="warning" text="Error Occurred" visible="false" />
             </children></AnchorPane>
     </center>

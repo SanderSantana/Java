@@ -14,9 +14,12 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
 
-
+import java.awt.geom.RectangularShape;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class RegisterController extends DatabaseConnection {
 
@@ -52,21 +55,43 @@ public class RegisterController extends DatabaseConnection {
     private Label warningLabel;
 
 
-    public void registerButtonOnAction() {
+    public void registerButtonOnAction() throws SQLException {
 
         int isPasswordValid = validatePassword();
 
+        boolean isRegistered = isUserRegistered();
+
         if (isPasswordValid == 0) {
 
-            warningLabel.setVisible(true);
+            failureMessage();
             return;
 
         }
+
+        if(isRegistered){
+
+            failureMessage();
+            return;
+        }
         Connection connection = getConnection();
 
-        String registerUser = "UPDATE UserProfile SET Username = 'DaVicent', Password = '123456' WHERE Token = '0000';";
-        
+        try {
 
+            String registerUser = "UPDATE UserProfile SET Username = '" + usernameField.getText() + "', Password = '"+ passwordField.getText() +"' WHERE Token = '"+ tokenField.getText() +"';";
+
+            Statement statement = connection.createStatement();
+
+            statement.execute(registerUser);
+
+            successMessage();
+            clearFields();
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+            failureMessage();
+
+        }
     }
 
     public int validatePassword() {
@@ -77,6 +102,58 @@ public class RegisterController extends DatabaseConnection {
 
         }
         else return 0;
+
+    }
+
+    public boolean isUserRegistered() throws SQLException {
+
+        Connection connection = getConnection();
+
+        String checkUsername = "SELECT Username FROM UserProfile WHERE Token = '"+ tokenField.getText() +"';";
+
+        Statement statement = connection.createStatement();
+
+        ResultSet resultSet = statement.executeQuery(checkUsername);
+
+        String username = "";
+        while (resultSet.next()){
+
+            username = resultSet.getString(1);
+
+        }
+
+        if (username == null){
+
+            return false;
+
+        }
+        else return true;
+
+    }
+
+    public void successMessage(){
+
+        warningLabel.setVisible(true);
+        warningLabel.setText("All set!");
+        warningLabel.setStyle("-fx-text-fill: #00ef00");
+
+    }
+
+
+    public void failureMessage(){
+
+        warningLabel.setVisible(true);
+        warningLabel.setText("Error Occurred");
+        warningLabel.setStyle("-fx-text-fill: #ff0000");
+
+    }
+
+    public void clearFields(){
+
+        usernameField.clear();
+        passwordField.clear();
+        reEnterPasswordField.clear();
+        tokenField.clear();
 
     }
 
