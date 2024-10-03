@@ -245,7 +245,7 @@ public class EditUserController extends DatabaseConnection{
 
             successMessage();
 
-        }catch (SQLException e) {
+        }catch (Exception e) {
 
             e.printStackTrace();
             warning.setVisible(true);

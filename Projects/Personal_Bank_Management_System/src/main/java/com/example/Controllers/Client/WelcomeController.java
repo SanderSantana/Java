@@ -16,16 +16,12 @@ public class WelcomeController {
     private Stage stage;
     @FXML
     private Scene scene;
+    private String loggedinUsername;
 
-    public void welcomePage(ActionEvent e) throws IOException {
-
-        Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/User/Welcome.fxml"));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
+    public WelcomeController(String loggedinUsername) {
+        this.loggedinUsername = UserSession.getInstance().getUsername();
     }
+
 
     public void logoutButtonOnAction(ActionEvent e) throws IOException {
 
@@ -43,8 +39,19 @@ public class WelcomeController {
 
     public void profileButtonOnAction(ActionEvent e) throws IOException {
 
-        ProfileController profileController = new ProfileController();
-        profileController.profilePage(e);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/Profile.fxml"));
+        Parent root = loader.load();
+
+        ProfileController profileController = loader.getController();
+
+        profileController.setLoggedInUsername(UserSession.getInstance().getUsername());
+
+        profileController.userDetails();
+
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 

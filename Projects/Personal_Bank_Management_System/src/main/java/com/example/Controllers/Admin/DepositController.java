@@ -102,12 +102,19 @@ public class DepositController extends DatabaseConnection {
 
     public void searchButtonOnAction() throws SQLException {
 
-        enableFields();
-
         Connection connection = getConnection();
         Statement statement = connection.createStatement();
 
         ToggleButton selectedAccount = (ToggleButton) accountGroup.getSelectedToggle();
+
+        if(accountNumber.getText().isEmpty()) {
+
+            warning.setVisible(true);
+            return;
+
+        }
+
+        enableFields();
 
         try {
 
@@ -126,6 +133,7 @@ public class DepositController extends DatabaseConnection {
         }catch (Exception e) {
 
             e.printStackTrace();
+            disableFields();
             warning.setVisible(true);
 
         }
@@ -151,7 +159,7 @@ public class DepositController extends DatabaseConnection {
                 amountOnDatabase = resultSet.getInt(1);
 
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
             e.printStackTrace();
             warning.setVisible(true);
@@ -179,7 +187,7 @@ public class DepositController extends DatabaseConnection {
 
             statement.execute(updateBalance);
 
-        }catch (SQLException e){
+        }catch (Exception e){
 
             e.printStackTrace();
             warning.setVisible(true);

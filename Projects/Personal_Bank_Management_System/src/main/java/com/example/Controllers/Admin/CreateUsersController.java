@@ -86,10 +86,7 @@ public class CreateUsersController {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
 
-        String getLastAccountNumber = "SELECT AccountNumber\n" +
-                "FROM Account\n" +
-                "ORDER BY CreatedAt DESC\n" +
-                "LIMIT 1;";
+        String getLastAccountNumber = "SELECT AccountNumber FROM Account ORDER BY CreatedAt DESC, AccountNumber DESC LIMIT  1;";
 
         Statement statement = connection.createStatement();
         ResultSet queryResult = statement.executeQuery(getLastAccountNumber);
@@ -111,7 +108,7 @@ public class CreateUsersController {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.getConnection();
 
-        String userIdQuery = "SELECT UserID FROM UserProfile ORDER BY CreatedAt DESC LIMIT 1;";
+            String userIdQuery = "SELECT UserID FROM UserProfile ORDER BY CreatedAt DESC, UserID DESC LIMIT 1;";
 
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(userIdQuery);
@@ -212,9 +209,9 @@ public class CreateUsersController {
 
             }
 
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (Exception ex) {
 
+            ex.printStackTrace();
             warning.setVisible(true);
 
         }

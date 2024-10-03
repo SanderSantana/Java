@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="loginBorderPane" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.ProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="loginBorderPane" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.ProfileController">
     <children>
         <VBox layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0" styleClass="leftLateralColumn">
             <children>
@@ -86,21 +86,22 @@
         </Label>
         <Label layoutX="200.0" layoutY="88.0" styleClass="smallHeaderAlternativeLabel" text="Username" />
         <HBox layoutX="200.0" layoutY="316.0" prefHeight="38.0" prefWidth="260.0" />
-      <JFXTextField layoutX="200.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXTextField fx:id="username" layoutX="200.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="200.0" layoutY="166.0" styleClass="smallHeaderAlternativeLabel" text="First Name" />
-      <JFXTextField layoutX="200.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXTextField fx:id="firstname" layoutX="200.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="200.0" layoutY="249.0" styleClass="smallHeaderAlternativeLabel" text="Last Name" />
-      <JFXTextField layoutX="200.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXTextField fx:id="lastname" layoutX="200.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="200.0" layoutY="411.0" styleClass="smallHeaderAlternativeLabel" text="Phone Number" />
-      <JFXTextField layoutX="200.0" layoutY="432.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXTextField fx:id="phoneNumber" layoutX="200.0" layoutY="432.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="200.0" layoutY="335.0" styleClass="smallHeaderAlternativeLabel" text="Email" />
-      <JFXTextField layoutX="200.0" layoutY="356.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXTextField fx:id="email" layoutX="200.0" layoutY="356.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="518.0" layoutY="88.0" styleClass="smallHeaderAlternativeLabel" text="Current-Password" />
-      <JFXPasswordField layoutX="518.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXPasswordField fx:id="currentPassword" layoutX="518.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="518.0" layoutY="166.0" styleClass="smallHeaderAlternativeLabel" text="New-Password" />
-      <JFXPasswordField layoutX="518.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXPasswordField fx:id="newPassword" layoutX="518.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
       <Label layoutX="518.0" layoutY="249.0" styleClass="smallHeaderAlternativeLabel" text="Re-enter Password" />
-      <JFXPasswordField layoutX="518.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <JFXButton layoutX="518.0" layoutY="334.0" prefHeight="41.0" prefWidth="210.0" styleClass="submitButton" text="Change Password" />
+      <JFXPasswordField fx:id="reEnterPassword" layoutX="518.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
+      <JFXButton layoutX="518.0" layoutY="334.0" onAction="#updatePassword" prefHeight="41.0" prefWidth="210.0" styleClass="submitButton" text="Change Password" />
+      <Label fx:id="warningLabel" layoutX="574.0" layoutY="57.0" styleClass="warning" text="Error Occurred" visible="false" />
     </children>
 </AnchorPane>

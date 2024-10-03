@@ -50,11 +50,14 @@ public class ClientLoginController extends DatabaseConnection {
     public void loginButtonOnAction(ActionEvent e) throws IOException {
 
         Connection connection = getConnection();
-        WelcomeController welcomeController = new WelcomeController();
+        WelcomeController welcomeController = new WelcomeController(loggedinUsername);
 
         try {
 
+
             Statement statement = connection.createStatement();
+
+
 
             String verifyLogin = "SELECT COUNT(1) FROM UserProfile WHERE Username = '"+ usernameField.getText() +"' AND Password = '"+ passwordField.getText() +"';";
 
@@ -64,8 +67,9 @@ public class ClientLoginController extends DatabaseConnection {
 
                 if (queryResult.getInt(1) == 1) {
 
+                    UserSession.getInstance().setUsername(usernameField.getText());
                     successMessage();
-                    welcomeController.welcomePage(e);
+                    welcomeController();
 
 
 
@@ -88,6 +92,13 @@ public class ClientLoginController extends DatabaseConnection {
 
 
         }
+
+    }
+
+    private void welcomeController() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/Welcome.fxml"));
+        Parent root = fxmlLoader.load();
 
     }
 

@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
 
+import javax.management.StandardEmitterMBean;
+import javax.swing.plaf.nimbus.State;
 import java.awt.geom.RectangularShape;
 import java.io.IOException;
 import java.sql.Connection;
@@ -60,8 +62,9 @@ public class RegisterController extends DatabaseConnection {
         int isPasswordValid = validatePassword();
 
         boolean isRegistered = isUserRegistered();
+        boolean isUsernameExistent = isUsernameExistent();
 
-        if (isPasswordValid == 0) {
+        if (isPasswordValid == 0 || isUsernameExistent) {
 
             failureMessage();
             return;
@@ -128,6 +131,31 @@ public class RegisterController extends DatabaseConnection {
 
         }
         else return true;
+
+    }
+
+    public boolean isUsernameExistent() throws SQLException {
+
+        Connection connection = getConnection();
+
+        String checkUsername = "SELECT COUNT(1) FROM UserProfile WHERE Username = '"+ usernameField.getText() +"';";
+
+        Statement statement = connection.createStatement();
+
+        ResultSet resultSet = statement.executeQuery(checkUsername);
+
+        int num = 0;
+        while (resultSet.next()){
+
+            num = resultSet.getInt(1);
+
+        }
+
+        if(num == 1){
+
+            return true;
+
+        }else return false;
 
     }
 
