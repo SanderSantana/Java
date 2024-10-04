@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ClientLoginController extends DatabaseConnection {
@@ -50,7 +51,6 @@ public class ClientLoginController extends DatabaseConnection {
     public void loginButtonOnAction(ActionEvent e) throws IOException {
 
         Connection connection = getConnection();
-        WelcomeController welcomeController = new WelcomeController(loggedinUsername);
 
         try {
 
@@ -69,7 +69,7 @@ public class ClientLoginController extends DatabaseConnection {
 
                     UserSession.getInstance().setUsername(usernameField.getText());
                     successMessage();
-                    welcomeController();
+                    welcomeController(e);
 
 
 
@@ -95,10 +95,19 @@ public class ClientLoginController extends DatabaseConnection {
 
     }
 
-    private void welcomeController() throws IOException {
+    private void welcomeController(ActionEvent e) throws IOException, SQLException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/Welcome.fxml"));
         Parent root = fxmlLoader.load();
+
+        WelcomeController welcomeController = fxmlLoader.getController();
+        welcomeController.setLoggedInUsername(UserSession.getInstance().getUsername());
+        welcomeController.dashboardData();
+
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 

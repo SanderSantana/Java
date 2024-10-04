@@ -60,7 +60,7 @@
                             </graphic>
                         </JFXButton>
                         <Line endX="57.0" layoutX="86.0" layoutY="376.0" startX="-70.0" stroke="#020114" strokeWidth="2.0" />
-                        <JFXButton layoutX="19.0" layoutY="303.0" prefHeight="42.0" prefWidth="120.0" styleClass="navUpperButton" text="Users">
+                        <JFXButton layoutX="19.0" layoutY="303.0" onAction="#usersButtonOnAction" prefHeight="42.0" prefWidth="120.0" styleClass="navUpperButton" text="Users">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

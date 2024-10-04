@@ -30,7 +30,7 @@
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <JFXButton focusTraversable="false" layoutX="18.0" layoutY="130.0" onAction="#createButtonOnAction" prefHeight="38.0" prefWidth="120.0" styleClass="navUpperButton" text="Create">
+                        <JFXButton focusTraversable="false" layoutX="18.0" layoutY="130.0" onAction="#CreateUsersPage" prefHeight="38.0" prefWidth="120.0" styleClass="navUpperButton" text="Create">
                             <graphic>
                                 <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -40,7 +40,7 @@
                             </graphic>
                         </JFXButton>
                         <JFXButton layoutX="18.0" layoutY="184.0" onAction="#editButtonOnAction" prefHeight="41.0" prefWidth="120.0" styleClass="navUpperButton" text="Edit" />
-                        <JFXButton layoutX="18.0" layoutY="242.0" prefHeight="42.0" prefWidth="120.0" styleClass="navUpperButton" text="Deposit">
+                        <JFXButton layoutX="18.0" layoutY="242.0" onAction="#depositButtonOnAction" prefHeight="42.0" prefWidth="120.0" styleClass="navUpperButton" text="Deposit">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -82,21 +82,21 @@
                 <Font size="29.0" />
             </font>
         </Label>
-      <JFXTextField layoutX="176.0" layoutY="57.0" prefHeight="25.0" prefWidth="617.0" />
+      <JFXTextField fx:id="searchTextField" layoutX="325.0" layoutY="49.0" prefHeight="27.0" prefWidth="320.0" promptText="  Search" />
       <ScrollPane layoutX="176.0" layoutY="85.0" prefHeight="401.0" prefWidth="617.0">
          <content>
-            <TableView fx:id="userTable" prefHeight="396.0" prefWidth="1463.0">
+            <TableView fx:id="usersTable" prefHeight="396.0" prefWidth="1503.0">
               <columns>
                 <TableColumn fx:id="username" prefWidth="150.0" text="Username" />
-                <TableColumn fx:id="firstName" prefWidth="150.0" text="FirstName" />
-                  <TableColumn fx:id="lastName" prefWidth="150.0" text="LastName" />
+                <TableColumn fx:id="firstname" prefWidth="150.0" text="FirstName" />
+                  <TableColumn fx:id="lastname" prefWidth="150.0" text="LastName" />
                   <TableColumn fx:id="email" prefWidth="150.0" text="Email" />
                   <TableColumn fx:id="date" prefWidth="150.0" text="DOB" />
                   <TableColumn fx:id="gender" prefWidth="150.0" text="Gender" />
                   <TableColumn fx:id="phoneNumber" prefWidth="150.0" text="PhoneNumber" />
                   <TableColumn fx:id="accountType" prefWidth="150.0" text="AccountType" />
-                  <TableColumn fx:id="accountNumber" prefWidth="150.0" text="AccountNumber" />
-                  <TableColumn fx:id="balance" prefWidth="150.0" text="Balance" />
+                  <TableColumn fx:id="accountNumber" prefWidth="152.0" text="AccountNumber" />
+                  <TableColumn fx:id="balance" prefWidth="148.0" text="Balance" />
               </columns>
             </TableView>
          </content>

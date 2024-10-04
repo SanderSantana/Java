@@ -102,11 +102,11 @@
                         <Image url="@../../Icons/card.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="14.0" layoutY="18.0" styleClass="typeOfCardLabel" text="Debit" />
-                  <Label fx:id="debitAccountNumber" layoutX="79.0" layoutY="90.0" prefHeight="23.0" prefWidth="167.0" styleClass="cardDigits" text="*****" />
+                  <Label fx:id="leftCardLabel" layoutX="14.0" layoutY="18.0" styleClass="typeOfCardLabel" text="Debit" />
+                  <Label fx:id="leftCardAccountNumber" layoutX="79.0" layoutY="90.0" prefHeight="23.0" prefWidth="167.0" styleClass="cardDigits" text="*****" />
                   <Label layoutX="92.0" layoutY="113.0" styleClass="cardExpiryDate" text="08/27" />
                   <Label layoutX="44.0" layoutY="62.0" styleClass="amountLabel" text="N$" />
-                  <Label fx:id="debitBalance" layoutX="88.0" layoutY="62.0" styleClass="amountLabel" text="4500.00" />
+                  <Label fx:id="leftCardBalance" layoutX="88.0" layoutY="62.0" styleClass="amountLabel" text="000000" />
                </children>
             </AnchorPane>
          </children>
@@ -125,11 +125,11 @@
                         <Image url="@../../Icons/card.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="15.0" layoutY="20.0" styleClass="typeOfCardLabel" text="Savings" />
+                  <Label fx:id="rightCardLabel" layoutX="15.0" layoutY="20.0" styleClass="typeOfCardLabel" text="No Account" />
                   <Label layoutX="93.0" layoutY="115.0" styleClass="cardExpiryDate" text="08/27" />
                   <Label layoutX="47.0" layoutY="62.0" styleClass="amountLabel" text="N$" />
-                  <Label fx:id="savingsBalance" layoutX="92.0" layoutY="62.0" styleClass="amountLabel" text="4500.00" />
-                  <Label fx:id="savingsAccountNumber" layoutX="86.0" layoutY="91.0" prefHeight="23.0" prefWidth="167.0" styleClass="cardDigits" text="*****" />
+                  <Label fx:id="rightCardBalance" layoutX="92.0" layoutY="62.0" styleClass="amountLabel" text="000000" />
+                  <Label fx:id="rightCardAccountNumber" layoutX="86.0" layoutY="91.0" prefHeight="23.0" prefWidth="167.0" styleClass="cardDigits" text="*****" />
                </children>
             </AnchorPane>
          </children>
@@ -144,7 +144,7 @@
       <Line endX="155.0" fill="#020114" layoutX="609.0" layoutY="388.0" startX="-100.0" stroke="#020114" strokeWidth="2.0" />
       <Label layoutX="517.0" layoutY="401.0" styleClass="smallHeaderLabel" text="Expenses" />
       <Label layoutX="517.0" layoutY="428.0" styleClass="negativeAmountLabel" text="N$" />
-      <Label fx:id="totalExpenses" layoutX="561.0" layoutY="428.0" styleClass="negativeAmountLabel" text="4500.00" />
+      <Label fx:id="totalExpenses" layoutX="561.0" layoutY="428.0" styleClass="negativeAmountLabel" text="0" />
       <HBox layoutX="200.0" layoutY="316.0" prefHeight="38.0" prefWidth="260.0">
          <children>
             <AnchorPane prefHeight="38.0" prefWidth="261.0" styleClass="transitionBox">

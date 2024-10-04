@@ -27,6 +27,8 @@ public class EditUserController extends DatabaseConnection{
     @FXML
     private Scene scene;
 
+
+
     public void EditUserPage(ActionEvent e) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/Admin/EditUser.fxml"));
@@ -56,6 +58,13 @@ public class EditUserController extends DatabaseConnection{
 
         DepositController depositController = new DepositController();
         depositController.DepositPage(e);
+
+    }
+
+    public void usersButtonOnAction(ActionEvent e) throws IOException{
+
+        UsersController usersController = new UsersController();
+        usersController.UsersPage(e);
 
     }
 

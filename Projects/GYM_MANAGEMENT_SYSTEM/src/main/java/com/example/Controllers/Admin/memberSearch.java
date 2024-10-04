@@ -1,9 +1,14 @@
 package com.example.Controllers.Admin;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
 public class memberSearch {
+
 
     int id, phoneNumber, outstanding;
     String fName, lName, gender, email, dob, subscription, address;
+
 
     public memberSearch(String fName, String lName, String gender, String email, String dob, String subscription, String address, int id, int phoneNumber, int outstanding) {
 

@@ -245,6 +245,99 @@
 
 }
 
+/* Style the ChoiceBox */
+.choice-box {
+    -fx-background-color: #FFFFFF;      /* Background color */
+    -fx-border-color: #D1D1D1;          /* Light border color */
+    -fx-border-radius: 5px;             /* Rounded corners */
+    -fx-background-radius: 5px;         /* Rounded corners */
+    -fx-padding: 5px;                   /* Padding inside the box */
+    -fx-font-size: 14px;                /* Font size */
+    -fx-font-family: "Segoe UI", sans-serif; /* Modern font family */
+}
+
+/* Style the arrow button inside the ChoiceBox */
+.choice-box .arrow-button {
+    -fx-background-color: transparent;   /* Transparent background */
+    -fx-border-color: transparent;       /* No border */
+}
+
+.choice-box:hover {
+    -fx-border-color: #6c63ff;           /* Border color on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0.1, 0, 4); /* Drop shadow effect on hover */
+}
+
+/* Style the dropdown items */
+.choice-box .list-cell {
+    -fx-background-color: #FFFFFF;        /* Background color */
+    -fx-text-fill: #333333;               /* Text color */
+    -fx-padding: 10px;                    /* Padding inside the dropdown cells */
+}
+
+.choice-box .list-cell:hover {
+    -fx-background-color: #f0f0f0;        /* Background on hover */
+    -fx-text-fill: #6c63ff;               /* Text color on hover */
+}
+
+/* Style the selected item */
+.choice-box .list-cell:selected {
+    -fx-background-color: #6c63ff;        /* Background of selected item */
+    -fx-text-fill: #FFFFFF;               /* Text color of selected item */
+}
+
+/* Focused state */
+.choice-box:focused {
+    -fx-border-color: #6c63ff;            /* Border color when focused */
+}
+
+#searchTextField {
+
+    -fx-background-color: white;
+    -fx-border-color: #03010e;
+    -fx-prompt-text-fill: Black;
+    -fx-text-fill: white;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: Bold;
+    -fx-font-size: 13;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    /*-fx-background-color: linear-gradient( #97d1d7 0%,#486869 100%);*/
+    -fx-border-radius: 10 10 0 0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);
+
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-font-family: "Adobe Garamond Pro Bold";
+    -fx-font-size: 12;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: #14122A;
+}
+
+.table-view .table-cell{
+    -fx-text-fill:#14122A;
+    -fx-background-color: white;
+
+
+}
+
+
 #payButton {
 
     -fx-text-fill: white;

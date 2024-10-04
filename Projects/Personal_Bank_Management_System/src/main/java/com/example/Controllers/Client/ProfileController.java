@@ -2,6 +2,9 @@ package com.example.Controllers.Client;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -11,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ProfileController extends ClientLoginController {
@@ -20,8 +24,12 @@ public class ProfileController extends ClientLoginController {
     @FXML
     private Scene scene;
 
+    private String loggedInUsername;
+
     public void setLoggedInUsername(String username) {
+
         this.loggedInUsername = username;
+
     }
 
     public void logoutButtonOnAction(ActionEvent e) throws IOException {
@@ -31,17 +39,35 @@ public class ProfileController extends ClientLoginController {
 
     }
 
-    public void dashboardButtonOnAction(ActionEvent e) throws IOException{
+    public void dashboardButtonOnAction(ActionEvent e) throws IOException, SQLException {
 
-        WelcomeController welcomeController = new WelcomeController(loggedinUsername);
-        welcomeController.welcomePage(e);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/Welcome.fxml"));
+        Parent root = fxmlLoader.load();
 
+        WelcomeController welcomeController = fxmlLoader.getController();
+        welcomeController.setLoggedInUsername(UserSession.getInstance().getUsername());
+        welcomeController.dashboardData();
+
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void sendMoneyButtonOnAction(ActionEvent e) throws IOException {
+    public void sendMoneyButtonOnAction(ActionEvent e) throws IOException, SQLException {
 
-        TransferController transferController = new TransferController();
-        transferController.transferPage(e);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/transfer.fxml"));
+        Parent root = loader.load();
+
+        TransferController transferController = loader.getController();
+        transferController.setLoggedInUsername(UserSession.getInstance().getUsername());
+        transferController.loadCardData();
+
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
 
     }
 
@@ -51,13 +77,6 @@ public class ProfileController extends ClientLoginController {
     private PasswordField currentPassword, newPassword, reEnterPassword;
     @FXML
     private Label warningLabel;
-
-    private String loggedInUsername;
-
-    public ProfileController() {
-        this.loggedInUsername = UserSession.getInstance().getUsername();
-    }
-
 
     public void userDetails(){
 

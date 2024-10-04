@@ -60,6 +60,14 @@ public class DepositController extends DatabaseConnection {
 
     }
 
+    public void usersButtonOnAction(ActionEvent e) throws IOException{
+
+        UsersController usersController = new UsersController();
+        usersController.UsersPage(e);
+
+    }
+
+
     public void logoutButtonOnAction(ActionEvent e) throws IOException {
 
         AdminLoginController adminLoginController = new AdminLoginController();
