@@ -71,6 +71,21 @@ public class ProfileController extends ClientLoginController {
 
     }
 
+    public void transactionButtonOnAction(ActionEvent e) throws IOException, SQLException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/transactions.fxml"));
+        Parent root = loader.load();
+
+        TransactionController transactionController = loader.getController();
+        transactionController.setLoggedInUsername(UserSession.getInstance().getUsername());
+
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
     @FXML
     private TextField username, firstname, lastname, email, phoneNumber;
     @FXML

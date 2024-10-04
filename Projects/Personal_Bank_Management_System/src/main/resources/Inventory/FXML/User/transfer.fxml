@@ -38,7 +38,7 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="18.0" layoutY="184.0" prefHeight="41.0" prefWidth="120.0" styleClass="navUpperButton" text="Transactions">
+                        <JFXButton layoutX="18.0" layoutY="184.0" onAction="#transactionButtonOnAction" prefHeight="41.0" prefWidth="120.0" styleClass="navUpperButton" text="Transactions">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

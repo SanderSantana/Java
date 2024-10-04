@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="loginBorderPane" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.ProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../../CSS/Style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controllers.Client.TransactionController">
     <children>
-        <VBox layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0" styleClass="leftLateralColumn">
+        <VBox layoutX="9.0" layoutY="7.0" prefHeight="484.0" prefWidth="157.0" styleClass="leftLateralColumn" stylesheets="@../../CSS/Style.css">
             <children>
                 <AnchorPane prefHeight="484.0" prefWidth="149.0">
                     <children>
@@ -24,7 +25,7 @@
                                 <Image url="@../../Icons/bank-building.png" />
                             </image>
                         </ImageView>
-                        <Text layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bankNameLabel" text="CypherTrust Bank" textAlignment="CENTER" wrappingWidth="119.96484375">
+                        <Text layoutX="19.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="headerMessage" text="CypherTrust Bank" textAlignment="CENTER" wrappingWidth="119.96484375">
                             <font>
                                 <Font size="15.0" />
                             </font>
@@ -38,16 +39,16 @@
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="18.0" layoutY="184.0" onAction="#transactionButtonOnAction" prefHeight="41.0" prefWidth="120.0" styleClass="navUpperButton" text="Transactions">
+                        <JFXButton layoutX="18.0" layoutY="184.0" prefHeight="41.0" prefWidth="120.0" styleClass="activePageNavButton" text="Transactions">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../Icons/handshake.png" />
+                                        <Image url="@../../Icons/handshake1.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="18.0" layoutY="351.0" prefHeight="38.0" prefWidth="113.0" styleClass="navLowerButton" text="  PROFILE">
+                        <JFXButton layoutX="18.0" layoutY="351.0" onAction="#profileButtonOnAction" prefHeight="38.0" prefWidth="113.0" styleClass="navLowerButton" text="  PROFILE">
                             <graphic>
                                 <ImageView fitHeight="18.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -79,29 +80,26 @@
                 </AnchorPane>
             </children>
         </VBox>
-        <Label layoutX="200.0" layoutY="14.0" prefHeight="43.0" prefWidth="288.0" styleClass="headerLabel" text="Profile &amp; Settings">
+        <Label layoutX="195.0" layoutY="13.0" prefHeight="43.0" prefWidth="216.0" styleClass="headerMessage" text="Transactions">
             <font>
                 <Font size="29.0" />
             </font>
         </Label>
-        <Label layoutX="200.0" layoutY="88.0" styleClass="smallHeaderAlternativeLabel" text="Username" />
-        <HBox layoutX="200.0" layoutY="316.0" prefHeight="38.0" prefWidth="260.0" />
-      <JFXTextField fx:id="username" layoutX="200.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="200.0" layoutY="166.0" styleClass="smallHeaderAlternativeLabel" text="First Name" />
-      <JFXTextField fx:id="firstname" layoutX="200.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="200.0" layoutY="249.0" styleClass="smallHeaderAlternativeLabel" text="Last Name" />
-      <JFXTextField fx:id="lastname" layoutX="200.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="200.0" layoutY="411.0" styleClass="smallHeaderAlternativeLabel" text="Phone Number" />
-      <JFXTextField fx:id="phoneNumber" layoutX="200.0" layoutY="432.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="200.0" layoutY="335.0" styleClass="smallHeaderAlternativeLabel" text="Email" />
-      <JFXTextField fx:id="email" layoutX="200.0" layoutY="356.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="518.0" layoutY="88.0" styleClass="smallHeaderAlternativeLabel" text="Current-Password" />
-      <JFXPasswordField fx:id="currentPassword" layoutX="518.0" layoutY="109.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="518.0" layoutY="166.0" styleClass="smallHeaderAlternativeLabel" text="New-Password" />
-      <JFXPasswordField fx:id="newPassword" layoutX="518.0" layoutY="187.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <Label layoutX="518.0" layoutY="249.0" styleClass="smallHeaderAlternativeLabel" text="Re-enter Password" />
-      <JFXPasswordField fx:id="reEnterPassword" layoutX="518.0" layoutY="270.0" prefHeight="41.0" prefWidth="210.0" styleClass="formField" />
-      <JFXButton layoutX="518.0" layoutY="334.0" onAction="#updatePassword" prefHeight="41.0" prefWidth="210.0" styleClass="submitButton" text="Change Password" />
-      <Label fx:id="warningLabel" layoutX="574.0" layoutY="57.0" styleClass="warning" text="Error Occurred" visible="false" />
+        <JFXTextField fx:id="searchTextField" layoutX="325.0" layoutY="53.0" prefHeight="27.0" prefWidth="320.0" promptText="  Search" />
+        <ScrollPane layoutX="176.0" layoutY="85.0" prefHeight="401.0" prefWidth="617.0">
+            <content>
+                <TableView fx:id="transactionTable" prefHeight="396.0" prefWidth="1050.0">
+                    <columns>
+                        <TableColumn fx:id="beneficiary" prefWidth="150.0" text="Beneficiary" />
+                        <TableColumn fx:id="accountNumber" prefWidth="152.0" text="AccountNumber" />
+                        <TableColumn fx:id="amount" prefWidth="150.0" text="Amount" />
+                        <TableColumn fx:id="myReference" prefWidth="150.0" text="My Reference" />
+                        <TableColumn fx:id="theirReference" prefWidth="150.0" text="Their Reference" />
+                        <TableColumn fx:id="status" prefWidth="150.0" text="Status" />
+                        <TableColumn fx:id="date" prefWidth="150.0" text="Date" />
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
     </children>
 </AnchorPane>

@@ -38,14 +38,6 @@ public class TransferController extends DatabaseConnection implements Initializa
         this.loggedInUsername = username;
 
     }
-   public void transferPage(ActionEvent e) throws IOException {
-
-       Parent root = FXMLLoader.load(getClass().getResource("/Inventory/FXML/User/transfer.fxml"));
-       stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-       Scene scene = new Scene(root);
-       stage.setScene(scene);
-       stage.show();
-   }
 
     public void logoutButtonOnAction(ActionEvent e) throws IOException {
 
@@ -53,6 +45,22 @@ public class TransferController extends DatabaseConnection implements Initializa
         clientLoginController.clientLoginPage(e);
 
     }
+
+    public void transactionButtonOnAction(ActionEvent e) throws IOException, SQLException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Inventory/FXML/User/transactions.fxml"));
+        Parent root = loader.load();
+
+        TransactionController transactionController = loader.getController();
+        transactionController.setLoggedInUsername(UserSession.getInstance().getUsername());
+
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
 
     public void dashboardButtonOnAction(ActionEvent e) throws IOException, SQLException {
 
