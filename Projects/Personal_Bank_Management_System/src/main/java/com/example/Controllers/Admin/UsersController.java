@@ -85,8 +85,6 @@ public class UsersController extends DatabaseConnection implements Initializable
             }
 
 
-
-
             username.setCellValueFactory(new PropertyValueFactory<>("username"));
             firstname.setCellValueFactory(new PropertyValueFactory<>("firstname"));
             lastname.setCellValueFactory(new PropertyValueFactory<>("lastname"));

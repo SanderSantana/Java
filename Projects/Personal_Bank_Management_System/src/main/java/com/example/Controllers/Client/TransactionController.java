@@ -47,6 +47,7 @@ public class TransactionController  extends DatabaseConnection implements Initia
     public void setLoggedInUsername(String username){
 
         this.loggedInUsername = username;
+        loadTransactionData();
 
     }
 
@@ -113,37 +114,34 @@ public class TransactionController  extends DatabaseConnection implements Initia
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+
+    }
+
+    public void loadTransactionData() {
         Connection connection = getConnection();
 
-        String getMembers = "SELECT Transaction.Beneficiary, Account.AccountNumber, Transaction.Amount, Transaction.Status, Transaction.MyReference, Transaction.TheirReference, Transaction.CreatedAt\n" +
-                "FROM Transaction\n" +
-                "JOIN Account ON Transaction.AccountID = Account.AccountID\n" +
-                "JOIN UserProfile ON Transaction.UserID = UserProfile.UserID\n" +
-                "WHERE UserProfile.Username = '"+ loggedInUsername +"';";
+        String getTransactions = "SELECT Transaction.Beneficiary, Account.AccountNumber, Transaction.Amount, " +
+                "Transaction.Status, Transaction.MyReference, Transaction.TheirReference, Transaction.CreatedAt " +
+                "FROM Transaction " +
+                "JOIN Account ON Transaction.AccountID = Account.AccountID " +
+                "JOIN UserProfile ON Transaction.UserID = UserProfile.UserID " +
+                "WHERE UserProfile.Username = '" + loggedInUsername + "';";
 
         try {
-
             Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(getTransactions);
 
-            ResultSet resultSet = statement.executeQuery(getMembers);
-
-            while(resultSet.next()){
-
+            while(resultSet.next()) {
                 String beneficiary = resultSet.getString("Beneficiary");
                 String myReference = resultSet.getString("MyReference");
                 String theirReference = resultSet.getString("TheirReference");
                 String status = resultSet.getString("Status");
-                String date = resultSet.getString("DateOfBirth");
-                int amount = resultSet.getInt("PhoneNumber");
+                String date = resultSet.getString("CreatedAt");
+                int amount = resultSet.getInt("Amount");
                 int accountNumber = resultSet.getInt("AccountNumber");
 
-                transactionList.add(new TransactionSearch(amount,accountNumber, theirReference, status, date, beneficiary,  myReference));
-
-
+                transactionList.add(new TransactionSearch(amount, accountNumber, theirReference, status, date, beneficiary, myReference));
             }
-
-
-
 
             beneficiary.setCellValueFactory(new PropertyValueFactory<>("beneficiary"));
             myReference.setCellValueFactory(new PropertyValueFactory<>("myReference"));
@@ -153,82 +151,34 @@ public class TransactionController  extends DatabaseConnection implements Initia
             amount.setCellValueFactory(new PropertyValueFactory<>("amount"));
             accountNumber.setCellValueFactory(new PropertyValueFactory<>("accountNumber"));
 
-
             transactionTable.setItems(transactionList);
+
+            // Adding search functionality
             FilteredList<TransactionSearch> filteredData = new FilteredList<>(transactionList, b -> true);
-
             searchTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-
-                filteredData.setPredicate(TransactionSearch -> {
-
-                    if (newValue.isEmpty() || newValue.isBlank()) {
-
+                filteredData.setPredicate(transactionSearch -> {
+                    if (newValue == null || newValue.isEmpty()) {
                         return true;
-
                     }
 
                     String searchKeyword = newValue.toLowerCase();
-
-                    if (TransactionSearch.getBeneficiary().toLowerCase().contains(searchKeyword))  {
-
-                        return true;
-
-                    }
-
-                    else if (TransactionSearch.getMyReference().toLowerCase().contains(searchKeyword)) {
-                        return true;
-
-                    }
-
-                    else if (TransactionSearch.getTheirReference().toLowerCase().contains(searchKeyword)) {
-
-                        return true;
-
-                    }
-
-                    else if (TransactionSearch.getStatus().toLowerCase().contains(searchKeyword)) {
-
-                        return true;
-
-                    }
-
-                    else if (TransactionSearch.getDate().toLowerCase().contains(searchKeyword)) {
-
-                        return true;
-
-                    }
-
-                    else if (String.valueOf(TransactionSearch.getAmount()).contains(searchKeyword)) {
-
-                        return true;
-
-                    }
-
-                    else if (String.valueOf(TransactionSearch.getAccountNumber()).contains(searchKeyword)) {
-
-                        return true;
-
-                    }
-
-                    else
-                        return false;
-
-
+                    return transactionSearch.getBeneficiary().toLowerCase().contains(searchKeyword) ||
+                            transactionSearch.getMyReference().toLowerCase().contains(searchKeyword) ||
+                            transactionSearch.getTheirReference().toLowerCase().contains(searchKeyword) ||
+                            transactionSearch.getStatus().toLowerCase().contains(searchKeyword) ||
+                            transactionSearch.getDate().toLowerCase().contains(searchKeyword) ||
+                            String.valueOf(transactionSearch.getAmount()).contains(searchKeyword) ||
+                            String.valueOf(transactionSearch.getAccountNumber()).contains(searchKeyword);
                 });
-
             });
 
             SortedList<TransactionSearch> sortedList = new SortedList<>(filteredData);
-
             sortedList.comparatorProperty().bind(transactionTable.comparatorProperty());
-
             transactionTable.setItems(sortedList);
 
-        }catch (Exception ex){
-
-            ex.printStackTrace();
-
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
     }
 }
+
