@@ -12,14 +12,16 @@ import javafx.stage.Stage;
 
 
 import javax.swing.plaf.nimbus.State;
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Optional;
 import java.util.Random;
 
-public class CreateUsersController {
+public class CreateUsersController extends DatabaseConnection {
 
     @FXML
     private Stage stage;
@@ -86,7 +88,6 @@ public class CreateUsersController {
         return String.valueOf(randomNumber);
 
     }
-
 
     public String fetchAccountNumber() throws SQLException {
 
@@ -223,9 +224,6 @@ public class CreateUsersController {
 
         }
     }
-
-
-
 
 
 

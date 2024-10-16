@@ -93,6 +93,7 @@ public class ProfileController extends ClientLoginController {
     @FXML
     private Label warningLabel;
 
+
     public void userDetails(){
 
 

@@ -5,12 +5,12 @@
 
 /**Costumization of The Bar where the buttons are located**/
 .dialog-pane > .button-bar > .container {
-    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041  20%, #F37274  60%);
+    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #03010e 20%, #004a52 60%);
 }
 
 .dialog-pane > .content.label {
     -fx-padding: 0.5em 0.5em 0.5em 0.5em;
-    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274  60%);
+    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #03010e 20%, #004a52 60%);
     -fx-text-fill:white;
     -fx-font-weight: bold;
     -fx-font-size:15.0px;
@@ -18,11 +18,11 @@
 
 /**Costumization of DialogPane Header**/
 .dialog-pane .header-panel {
-    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041  20%, #F37274  60%);
+    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #03010e 20%, #004a52 60%);
 }
 
 .dialog-pane .header-panel .label{
-    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #E94041 20%, #F37274 60%);;
+    -fx-background-color: linear-gradient(from 0% 10% to 100% 200%, repeat, #03010e 20%, #004a52 60%);;
 
     -fx-text-fill:white;
     -fx-font-weight: bold;

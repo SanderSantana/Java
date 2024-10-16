@@ -34,15 +34,23 @@ CREATE TABLE UserProfile (
     Password varchar(50),
     PRIMARY KEY (Username));
     
-    CREATE TABLE Transaction (
-    TransactionID int AUTO_INCREMENT, 
-    Username varchar(50), 
+CREATE TABLE Transaction (
+    TransactionID int AUTO_INCREMENT PRIMARY KEY, 
+    UserID int, 
     AccountID int,
-    Beneficiary varchar(50),
-    MyReference varchar(50),
-    TheirReference varchar(50),
+    Beneficiary varchar(50) NOT NULL,
+    MyReference varchar(50) NOT NULL,
+    TheirReference varchar(50) NOT NULL,
     Email varchar(50),
-    phoneNumber int, 
-    Amount int, 
-    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ); 	
+    phoneNumber varchar(9) NOT NULL CHECK (phoneNumber REGEXP '^[0-9]{9}$'), 
+    Amount decimal(18,2) NOT NULL CHECK (Amount >= 0),
+    AccountNumber int NOT NULL CHECK (AccountNumber REGEXP '^[0-9]+$'),
+    Status varchar(50),
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_user FOREIGN KEY (UserID) REFERENCES UserProfile(UserID),
+	CONSTRAINT fk_account FOREIGN KEY (AccountID) REFERENCES Account(AccountID),
+    CONSTRAINT chk_email_format CHECK (Email REGEXP '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')
+);
+
+
     

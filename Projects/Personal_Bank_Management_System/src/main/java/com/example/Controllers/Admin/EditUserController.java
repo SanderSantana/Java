@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 import javax.swing.plaf.nimbus.State;
+import javax.swing.undo.StateEdit;
 import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.sql.Connection;
@@ -19,6 +20,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.util.Optional;
 
 public class EditUserController extends DatabaseConnection{
 
@@ -107,6 +109,7 @@ public class EditUserController extends DatabaseConnection{
         credit.setSelected(false);
         gender.getSelectedToggle().setSelected(false);
         date.getEditor().clear();
+        warning.setVisible(false);
 
 
     }
@@ -155,8 +158,9 @@ public class EditUserController extends DatabaseConnection{
 
         ResultSet personalDetails = personalDetailsStatement.executeQuery(fetchPersonalDetails);
 
+    try {
 
-        while(personalDetails.next()) {
+        while (personalDetails.next()) {
 
             firstName.setText(personalDetails.getString(1));
             lastName.setText(personalDetails.getString(2));
@@ -170,8 +174,7 @@ public class EditUserController extends DatabaseConnection{
 
             female.setSelected(true);
 
-        }
-        else {
+        } else if (gender.equals("Male")) {
 
             male.setSelected(true);
 
@@ -187,19 +190,18 @@ public class EditUserController extends DatabaseConnection{
         String accountType2 = null;
 
         int count = 0;
-        while(accountDetails.next()){
+        while (accountDetails.next()) {
 
             count++;
-             if(count == 1){
+            if (count == 1) {
 
-                 accountType1 = accountDetails.getString(1);
+                accountType1 = accountDetails.getString(1);
 
-             }
-             else if (count == 2){
+            } else if (count == 2) {
 
-                 accountType2 = accountDetails.getString(1);
+                accountType2 = accountDetails.getString(1);
 
-             }
+            }
 
         }
 
@@ -213,16 +215,14 @@ public class EditUserController extends DatabaseConnection{
             if (accountType1.equals("Credit") || accountType2.equals("Credit")) {
                 credit.setSelected(true);
             }
-        }
-        else {
+        } else {
 
             if (accountType1.equals("Credit") && accountType2 == null) {
 
                 credit.setSelected(true);
                 savings.setSelected(false);
 
-            }
-            else if (accountType1.equals("Savings") && accountType2 == null) {
+            } else if (accountType1.equals("Savings") && accountType2 == null) {
 
                 credit.setSelected(false);
                 savings.setSelected(true);
@@ -235,6 +235,12 @@ public class EditUserController extends DatabaseConnection{
 
         System.out.println(accountType2 + " " + accountType1);
 
+    }catch (Exception ex){
+        ex.printStackTrace();
+        resetButtonOnAction();
+        failureMessage();
+
+    }
     }
 
     public void updateUserDetails() throws SQLException {
@@ -260,6 +266,57 @@ public class EditUserController extends DatabaseConnection{
             warning.setVisible(true);
 
         }
+    }
+
+    public void alertButtonOnAction(ActionEvent e) throws Exception {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("/Inventory/CSS/Style.css").toExternalForm());
+        alert.setTitle("Delete?");
+        alert.setContentText("Do you wish to delete this user?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+
+            deleteUserButtonOnAction(e);
+        }
+
+    }
+
+    public void failureMessage(){
+
+        warning.setVisible(true);
+        warning.setText("Error Occurred");
+        warning.setStyle("-fx-text-fill: #ff0000");
+
+    }
+
+
+    public void deleteUserButtonOnAction(ActionEvent e) throws SQLException{
+
+        Connection connection = getConnection();
+        int UserID = fetchUserId();
+        String deleteUserProfile = "DELETE FROM UserProfile WHERE UserID = '"+ UserID +"';";
+        String deleteUserAccount = "DELETE FROM Account WHERE UserID = '"+ UserID +"';";
+        String deleteUserTransactionHistory = "DELETE FROM Transaction WHERE UserID = '"+ UserID +"';";
+
+        Statement statement = connection.createStatement();
+
+        try {
+            statement.execute(deleteUserProfile);
+            resetButtonOnAction();
+            successMessage();
+//            statement.execute(deleteUserAccount);
+//            statement.execute(deleteUserTransactionHistory);
+        }catch (Exception ex){
+
+            ex.printStackTrace();
+            failureMessage();
+
+
+        }
+
     }
 
 

@@ -2,11 +2,13 @@ package com.example.Controllers.Client;
 
 public class TransactionSearch {
 
-    int amount, accountNumber;
 
     String beneficiary, myReference, theirReference, status, date;
+    int amount, accountNumber;
 
-    public TransactionSearch(int amount, int accountNumber, String beneficiary, String myReference, String theirReference, String status, String date) {
+
+
+    public TransactionSearch(String beneficiary, int accountNumber, int amount, String myReference, String theirReference, String status, String date) {
         this.amount = amount;
         this.accountNumber = accountNumber;
         this.beneficiary = beneficiary;

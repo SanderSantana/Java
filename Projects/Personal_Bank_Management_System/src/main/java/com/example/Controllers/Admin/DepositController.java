@@ -122,7 +122,7 @@ public class DepositController extends DatabaseConnection {
 
         }
 
-        enableFields();
+
 
         try {
 
@@ -135,6 +135,7 @@ public class DepositController extends DatabaseConnection {
                 firstName.setText(resultSet.getString(1));
                 lastName.setText(resultSet.getString(2));
                 availableBalance.setText(String.valueOf(resultSet.getInt(3)));
+                enableFields();
 
             }
 

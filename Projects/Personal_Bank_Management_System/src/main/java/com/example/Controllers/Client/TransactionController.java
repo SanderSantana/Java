@@ -140,7 +140,7 @@ public class TransactionController  extends DatabaseConnection implements Initia
                 int amount = resultSet.getInt("Amount");
                 int accountNumber = resultSet.getInt("AccountNumber");
 
-                transactionList.add(new TransactionSearch(amount, accountNumber, theirReference, status, date, beneficiary, myReference));
+                transactionList.add(new TransactionSearch(beneficiary, accountNumber, amount, myReference, theirReference, status, date ));
             }
 
             beneficiary.setCellValueFactory(new PropertyValueFactory<>("beneficiary"));

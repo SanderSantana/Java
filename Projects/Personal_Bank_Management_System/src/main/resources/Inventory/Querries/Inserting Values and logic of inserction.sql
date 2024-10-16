@@ -13,11 +13,14 @@ SELECT UserID FROM UserProfile ORDER BY CreatedAt DESC LIMIT 1;
  
 -- 3. Use the UserId Fetched to insert new row(s)
 INSERT INTO Account (UserID, AccountType, AccountNumber) VALUES 
-(1, 'Credit', 600000000);
+(2, 'Credit', 600000000);
 -- Or If he has chosen two accounts
-INSERT INTO Account (Username, AccountType, AccountNumber) VALUES 
-('132', 'Credit', 600000000),
-('025', 'Savings', 600000000);
+INSERT INTO Account (UserID, AccountType, AccountNumber) VALUES 
+('1', 'Credit', 600000000),
+('1', 'Savings', 600000000);
+
+-- 4. fetch Account Number 
+SELECT AccountNumber FROM Account ORDER BY CreatedAt DESC, AccountNumber DESC LIMIT  1;
 
 
 -- PROCESS OF EDITING USER TO DATABASE --

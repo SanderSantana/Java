@@ -18,6 +18,7 @@ public class DatabaseConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
             databaseLink = DriverManager.getConnection("jdbc:mysql://localhost:3306/PersonalBakingSystem", "root", "Ss32566565");
 
+
         }
         catch (Exception e) {
 
